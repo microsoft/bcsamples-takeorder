@@ -4,8 +4,8 @@
   "powerPlatformSolutionFolder": "TakeOrder",
   "environments": [
     "andersg (Production)",
-    "UX (Production)", 
-	  "Staging"
+    "UX (Production)",
+    "Staging"
   ],
   "DeployToUX": {
     "environmentName": "production",
