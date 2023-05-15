@@ -1,0 +1,25 @@
+comBigDividerBottom As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =20
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    HTMLDivider_1 As htmlViewer:
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =Parent.Height
+        HtmlText: |-
+            ="<div style='
+            height: " & Self.Height - 1 &"px;   
+            width: 100%;   
+            background: linear-gradient(0deg, rgba(48,49,51,0.1) 30%, rgba(48,49,51,0) 100%);
+            '></div>
+            "
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Width: =Parent.Width
+        ZIndex: =1
+

@@ -1,0 +1,217 @@
+"'Loading Screen' As screen":
+    Fill: =varTheme.primaryColor
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
+    OnVisible: =
+
+    conPlaceholder As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height -imgLearnMorePlaceholder.Height - 90 
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =10
+        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        Y: =140
+        ZIndex: =1
+
+        imgLogoPlaceholder As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =Self.Width
+            Image: ='Fourth Coffe_logo_x2 (1)'
+            LayoutMinHeight: =320
+            LayoutMinWidth: =320
+            Width: =Parent.Width * 40%
+            X: =(Parent.Width / 2) - (imgLogoPlaceholder.Width / 2)
+            Y: =46
+            ZIndex: =2
+
+        lblCompanyNamePlaceholder As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =varTheme.font
+            FontWeight: =FontWeight.Semibold
+            Height: =129
+            LayoutMinHeight: =70
+            LayoutMinWidth: =560
+            Size: =40  
+            Text: =
+            Width: =608
+            X: =Parent.Width/2 - Self.Width/2
+            Y: =Parent.Height/2 - Self.Height/2
+            ZIndex: =3
+
+        conUserInformation_1 As groupContainer.manualLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            ZIndex: =4
+
+            lblUserName_1 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(32, 54, 71, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =varTheme.font
+                FontWeight: =FontWeight.Semibold
+                Height: =45
+                Size: =22
+                Text: =
+                Width: =Parent.Width
+                Y: =lblUserLabel_1.Height
+                ZIndex: =1
+
+            lblUserLabel_1 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(32, 54, 71, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =varTheme.font
+                Size: =20  
+                Text: =varLabels.StartScreen_User
+                Width: =Parent.Width
+                X: =Parent.Width/2 - Self.Width/2
+                ZIndex: =2
+
+        btnStart_1 As button:
+            BorderColor: =Color.White
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =Self.Color
+            DisabledFill: =Self.Fill
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =varTheme.primaryColor
+            Font: =varTheme.font
+            FontWeight: =FontWeight.Semibold
+            Height: =72
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            LayoutMinHeight: =70
+            LayoutMinWidth: =280
+            OnSelect: =Navigate('Select table screen', ScreenTransition.Cover);
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            RadiusBottomLeft: =35
+            RadiusBottomRight: =35
+            RadiusTopLeft: =35
+            RadiusTopRight: =35
+            Size: =24
+            Text: =varLabels.StartScreen_TakeOrder
+            Width: =280
+            X: =(Parent.Width / 2) - (btnStart_1.Width / 2)
+            Y: =Parent.Height - 120
+            ZIndex: =5
+
+    imgLearnMorePlaceholder As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.Disabled
+        Image: ='info page white icon'
+        PaddingBottom: =20
+        PaddingLeft: =20
+        PaddingRight: =20
+        PaddingTop: =20
+        X: =Parent.Width - Self.Width
+        ZIndex: =2
+
+    timeStartLoading As timer:
+        AutoStart: =true
+        BorderColor: =Color.Transparent
+        BorderThickness: =0
+        Duration: =1000
+        Fill: =RGBA(98, 91, 76, 40%)
+        FontWeight: =FontWeight.Lighter
+        Height: =Parent.Height
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =Color.Transparent
+        OnSelect: |-
+            =// Get localized labels from Bc
+            // Note: AL logic to parse language parameter fails
+            Set(varLanguageResources, Filter('languageResources (businessCentralDemos/TakeOrder/beta)', languageCode = "en-us"));
+            Set(varLabels, {
+                Subtract: LookUp(varLanguageResources, labelId = "Subtract").DisplayName,
+                LoadingMessage: LookUp(varLanguageResources, labelId = "LoadingMessage").DisplayName,
+                AddText: LookUp(varLanguageResources, labelId = "AddText").DisplayName,
+                FirstAdd: LookUp(varLanguageResources, labelId = "FirstAdd").DisplayName,
+                DismissQuantityControl: LookUp(varLanguageResources, labelId = "DismissQuantityControl").DisplayName,    
+                GallerySelect: LookUp(varLanguageResources, labelId = "GallerySelect").DisplayName,
+                ItemImageText: LookUp(varLanguageResources, labelId = "ItemImageText").DisplayName,    
+                StartScreen_TakeOrder: LookUp(varLanguageResources, labelId = "StartScreen_TakeOrder").DisplayName,
+                StartScreen_User: LookUp(varLanguageResources, labelId = "StartScreen_User").DisplayName,
+                StartScreen_InfoScreen: LookUp(varLanguageResources, labelId = "StartScreen_InfoScreen").DisplayName,    
+                InfoScreen_Title: LookUp(varLanguageResources, labelId = "InfoScreen_Title").DisplayName,    
+                InfoScreen_Text: LookUp(varLanguageResources, labelId = "InfoScreen_Text").DisplayName, 
+                InfoScreen_ReadMore: LookUp(varLanguageResources, labelId = "InfoScreen_ReadMore").DisplayName,        
+                InfoScreen_Link: LookUp(varLanguageResources, labelId = "InfoScreen_Link").DisplayName,                   
+                InfoScreen_Close: LookUp(varLanguageResources, labelId = "InfoScreen_Close").DisplayName,        
+                InfoScreen_LinkToolTip: LookUp(varLanguageResources, labelId = "InfoScreen_LinkToolTip").DisplayName,        
+                SelectTableScreen_Title: LookUp(varLanguageResources, labelId = "SelectTableScreen_Title").DisplayName,            
+                SelectTableScreen_Free: LookUp(varLanguageResources, labelId = "SelectTableScreen_Free").DisplayName,            
+                SelectTableScreen_Occupied: LookUp(varLanguageResources, labelId = "SelectTableScreen_Occupied").DisplayName,            
+                SelectTableScreen_Update: LookUp(varLanguageResources, labelId = "SelectTableScreen_Update").DisplayName,           
+                SelectTableScreen_GalleryToolTip: LookUp(varLanguageResources, labelId = "SelectTableScreen_GalleryToolTip").DisplayName,                
+                TakeOrderScreen_FullMenu: LookUp(varLanguageResources, labelId = "TakeOrderScreen_FullMenu").DisplayName,                
+                TakeOrderScreen_Items: LookUp(varLanguageResources, labelId = "TakeOrderScreen_Items").DisplayName,                
+                TakeOrderScreen_Totals: LookUp(varLanguageResources, labelId = "TakeOrderScreen_Totals").DisplayName,                
+                TakeOrderScreen_Review: LookUp(varLanguageResources, labelId = "TakeOrderScreen_Review").DisplayName,    
+                TakeOrderScreen_Close: LookUp(varLanguageResources, labelId = "TakeOrderScreen_Close").DisplayName,                
+                TakeOrderScreen_ItemGallery: LookUp(varLanguageResources, labelId = "TakeOrderScreen_ItemGallery").DisplayName,                
+                TakeOrderScreen_FilterGallery: LookUp(varLanguageResources, labelId = "TakeOrderScreen_FilterGallery").DisplayName,                
+                TakeOrderScreen_Delete: LookUp(varLanguageResources, labelId = "TakeOrderScreen_Delete").DisplayName,                
+                SummaryScreen_Delete: LookUp(varLanguageResources, labelId = "SummaryScreen_Delete").DisplayName,               
+                SummaryScreen_Back: LookUp(varLanguageResources, labelId = "SummaryScreen_Back").DisplayName,                 
+                SummaryScreen_Submit: LookUp(varLanguageResources, labelId = "SummaryScreen_Submit").DisplayName,                 
+                SummaryScreen_AddMore: LookUp(varLanguageResources, labelId = "SummaryScreen_AddMore").DisplayName,                 
+                SummaryScreen_CheckOut: LookUp(varLanguageResources, labelId = "SummaryScreen_CheckOut").DisplayName,                 
+                SummaryScreen_Total: LookUp(varLanguageResources, labelId = "SummaryScreen_Total").DisplayName,                 
+                SummaryScreen_DeleteMessage: LookUp(varLanguageResources, labelId = "SummaryScreen_DeleteMessage").DisplayName,                 
+                SummaryScreen_Gallery: LookUp(varLanguageResources, labelId = "SummaryScreen_Gallery").DisplayName,                 
+                SummaryScreen_SummaryStateCollapsed: LookUp(varLanguageResources, labelId = "SummaryScreen_SummaryStateCollapsed").DisplayName,                 
+                SummaryScreen_SummaryStateExpanded: LookUp(varLanguageResources, labelId = "SummaryScreen_SummaryStateExpanded").DisplayName,                 
+                SummaryScreen_CheckOutMessage: LookUp(varLanguageResources, labelId = "SummaryScreen_CheckOutMessage").DisplayName,
+                SummaryScreen_SummaryDraftTitle: LookUp(varLanguageResources, labelId = "SummaryScreen_SummaryDraftTitle").DisplayName,
+                SummaryScreen_SummarySubmittedTitle: LookUp(varLanguageResources, labelId = "SummaryScreen_SummarySubmittedTitle").DisplayName,
+                SummaryScreen_SummaryAddTo: LookUp(varLanguageResources, labelId = "SummaryScreen_SummaryAddTo").DisplayName,
+                SummaryScreen_OrderUpdatedMessage: LookUp(varLanguageResources, labelId = "SummaryScreen_OrderUpdatedMessage").DisplayName    
+            });
+            
+            // Set up data
+            ClearCollect(colItemGroup, varLabels.TakeOrderScreen_FullMenu);
+            Concurrent(
+                Set(varUserName,User().FullName),
+                Set(varBcCompany,First('localeInformations (businessCentralDemos/TakeOrder/beta)')),
+                Set(varTables, Filter('tables (businessCentralDemos/TakeOrder/beta)', IsTable)),
+                Collect(colItemGroup, Distinct(Filter('itemsWithImage (businessCentralDemos/TakeOrder/beta)', 'Sold In Restaurant'), itemCategoryName))
+            );
+            
+            Set(varCompanyName,varBcCompany.DisplayName);
+            Set(varBcLocale, varBcCompany.powerAppLocale);
+            
+            // Note: when this format is used with locale, the currentcy sign is localized by the platform
+            Set(varCurrencyFormat, "$#,##0.00");
+            
+            
+            Navigate('Start screen', ScreenTransition.Fade);
+        OnTimerStart: =Select(Self);
+        Start: =true
+        Text: =
+        Tooltip: =varLabels.LoadingMessage
+        Width: =Parent.Width
+        ZIndex: =3
+
+    imgSpinner As image:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Image: =Spinner_DarkBeige_2x
+        X: =Parent.Width/2 - Self.Width/2
+        Y: =Parent.Height * 0.5
+        ZIndex: =4
+

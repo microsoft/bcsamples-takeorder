@@ -1,0 +1,88 @@
+{
+  "150e2896-54f3-405b-a1ae-bdda9e197568": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1615/1.0.1615.3163/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "6cb6806c-e815-4e58-8693-91bcb31c69e7": {
+          "value": "shared_dynamicssmbsaas"
+        },
+        "workflowEntityId": {
+          "value": "8b94a6d9-a3c1-ed11-83ff-000d3a991110"
+        },
+        "workflowName": {
+          "value": "1fcdc507-7183-432b-9048-4be6f0ad963b"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_dynamicssmbsaas": {
+          "value": "6cb6806c-e815-4e58-8693-91bcb31c69e7"
+        },
+        "workflowEntityId": {
+          "value": "8b94a6d9-a3c1-ed11-83ff-000d3a991110"
+        },
+        "workflowName": {
+          "value": "1fcdc507-7183-432b-9048-4be6f0ad963b"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "PostBCSalesOrder"
+    ],
+    "dependencies": {
+      "shared_dynamicssmbsaas": "6cb6806c-e815-4e58-8693-91bcb31c69e7"
+    },
+    "dependents": [],
+    "id": "150e2896-54f3-405b-a1ae-bdda9e197568"
+  },
+  "6cb6806c-e815-4e58-8693-91bcb31c69e7": {
+    "connectionRef": {
+      "apiTier": "Premium",
+      "displayName": "Dynamics 365 Business Central",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1624/1.0.1624.3220/dynamicssmbsaas/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_dynamicssmbsaas",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "PowerApps,dc50d5e8-f9c9-ed11-94cc-000d3a220b2f": {
+        "dataSources": {
+          "itemsWithImage (businessCentralDemos/TakeOrder/beta)": {
+            "tableName": "itemsWithImage,businessCentralDemos%252FTakeOrder%252Fbeta"
+          },
+          "languageResources (businessCentralDemos/TakeOrder/beta)": {
+            "tableName": "languageResources,businessCentralDemos%252FTakeOrder%252Fbeta"
+          },
+          "localeInformations (businessCentralDemos/TakeOrder/beta)": {
+            "tableName": "localeInformations,businessCentralDemos%252FTakeOrder%252Fbeta"
+          },
+          "salesOrderLines (v2.0)": {
+            "tableName": "salesOrderLines,v2.0"
+          },
+          "salesOrders (v2.0)": {
+            "tableName": "salesOrders,v2.0"
+          },
+          "tables (businessCentralDemos/TakeOrder/beta)": {
+            "tableName": "tables,businessCentralDemos%252FTakeOrder%252Fbeta"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "salesOrders (v2.0)",
+      "salesOrderLines (v2.0)",
+      "itemsWithImage (businessCentralDemos/TakeOrder/beta)",
+      "languageResources (businessCentralDemos/TakeOrder/beta)",
+      "localeInformations (businessCentralDemos/TakeOrder/beta)",
+      "tables (businessCentralDemos/TakeOrder/beta)"
+    ],
+    "dependencies": {},
+    "dependents": [
+      "150e2896-54f3-405b-a1ae-bdda9e197568"
+    ],
+    "id": "6cb6806c-e815-4e58-8693-91bcb31c69e7"
+  }
+}

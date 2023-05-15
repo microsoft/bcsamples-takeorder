@@ -1,4 +1,20 @@
 {
   "type": "PTE",
-  "templateUrl": "https://github.com/microsoft/AL-Go-PTE@main"
+  "templateUrl": "https://github.com/microsoft/AL-Go-PTE@PPPreview",
+  "powerPlatformSolutionFolder": "TakeOrder",
+  "environments": [
+    "andersg (Production)",
+    "UX (Production)", 
+	  "Staging"
+  ],
+  "DeployToUX": {
+    "environmentName": "production",
+    "companyId": "14bce256-55e9-ed11-8850-6045bde98bba",
+    "ppEnvironmentUrl": "https://org46f025ef.crm.dynamics.com/"
+  },
+  "DeployToStaging": {
+    "environmentName": "staging",
+    "companyId": "14bce256-55e9-ed11-8850-6045bde98bba",
+    "ppEnvironmentUrl": "https://org36168d50.crm.dynamics.com/"
+  }
 }

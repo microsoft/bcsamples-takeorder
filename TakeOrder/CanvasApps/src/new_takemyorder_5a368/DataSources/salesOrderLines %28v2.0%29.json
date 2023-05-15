@@ -1,0 +1,49 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_dynamicssmbsaas",
+    "CdpRevision": {
+      "BaseUrl": "/v3",
+      "LastChangedTimeString": "2023-03-17T21:39:52.4860000Z",
+      "RevisionNumber": 3
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "accountId": "Account Id",
+      "amountExcludingTax": "Amount Excluding Tax",
+      "amountIncludingTax": "Amount Including Tax",
+      "description": "Description",
+      "discountAmount": "Discount Amount",
+      "discountAppliedBeforeTax": "Discount Applied Before Tax",
+      "discountPercent": "Discount Percent",
+      "documentId": "Document Id",
+      "id": "Id",
+      "invoiceDiscountAllocation": "Invoice Discount Allocation",
+      "invoicedQuantity": "Invoiced Quantity",
+      "invoiceQuantity": "Invoice Quantity",
+      "itemId": "Item Id",
+      "itemVariantId": "Item Variant Id",
+      "lineObjectNumber": "Line Object No.",
+      "lineType": "Line Type",
+      "locationId": "Location Id",
+      "netAmount": "Net Amount",
+      "netAmountIncludingTax": "Net Amount Including Tax",
+      "netTaxAmount": "Net Tax Amount",
+      "quantity": "Quantity",
+      "sequence": "Sequence",
+      "shipmentDate": "Shipment Date",
+      "shippedQuantity": "Shipped Quantity",
+      "shipQuantity": "Ship Quantity",
+      "taxCode": "Tax Code",
+      "taxPercent": "Tax Percent",
+      "totalTaxAmount": "Total Tax Amount",
+      "unitOfMeasureCode": "Unit Of Measure Code",
+      "unitOfMeasureId": "Unit Of Measure Id",
+      "unitPrice": "Unit Price"
+    },
+    "DatasetName": "PowerApps,dc50d5e8-f9c9-ed11-94cc-000d3a220b2f",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "salesOrderLines (v2.0)",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_dynamicssmbsaas",
+    "CdpRevision": {
+      "BaseUrl": "/v3",
+      "LastChangedTimeString": "2023-03-24T16:12:47.5350000Z",
+      "RevisionNumber": 3
+    },
+    "ConnectedDataSourceInfoNameMapping": {
+      "AllergenInformation": "Allergen Information",
+      "baseUnitOfMeasureCode": "Base Unit Of Measure Code",
+      "DisplayName": "Display Name",
+      "GTIN": "GTIN",
+      "id": "System ID",
+      "itemCategoryCode": "Item Category Code",
+      "itemCategoryName": "Item Category Name",
+      "itemImageText": "Picture Reference",
+      "LongItemDescription": "Long Item Description",
+      "number": "Number",
+      "picture": "Picture",
+      "pictureHeight": "Picture Height",
+      "pictureWidth": "Picture Width",
+      "SoldInRestaurant": "Sold In Restaurant",
+      "unitPrice": "Unit Price"
+    },
+    "DatasetName": "POWERAPPS,dc50d5e8-f9c9-ed11-94cc-000d3a220b2f",
+    "EncodeDataset": true,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "itemsWithImage (businessCentralDemos/TakeOrder/beta)",
+    "Type": "ConnectedDataSourceInfo"
+  }
+]

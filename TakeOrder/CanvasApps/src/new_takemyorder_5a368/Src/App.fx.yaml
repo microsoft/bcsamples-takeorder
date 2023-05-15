@@ -1,0 +1,26 @@
+App As appinfo:
+    BackEnabled: =false
+    ConfirmExit: =true
+    ConfirmExitMessage: |-
+        ="Are you sure you want to close the app? 
+        Any unsubmitted changes will be lost"
+    OnError: =
+    OnStart: |
+        =Set(
+            varTheme,
+            {
+                font: Font.'Segoe UI',
+                primaryColor: ColorValue("#615B4C"),
+                secondaryColor: ColorValue("#FFFAEC"),    
+                textColor: RGBA(33, 33, 33, 1)
+            }
+        );
+    StartScreen: ='Loading Screen'
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

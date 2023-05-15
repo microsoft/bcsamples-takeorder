@@ -1,0 +1,127 @@
+"'Start screen' As screen":
+    Fill: =varTheme.primaryColor
+    LoadingSpinnerColor: =RGBA(100, 118, 132, 1)
+    OnVisible: =
+
+    conStartScreenContent As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height -imgLearnMore.Height - 90 
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =10
+        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        Y: =140
+        ZIndex: =7
+
+        imgLogo As image:
+            BorderColor: =RGBA(32, 54, 71, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =Self.Width
+            Image: ='Fourth Coffe_logo_x2 (1)'
+            LayoutMinHeight: =320
+            LayoutMinWidth: =320
+            Width: =Parent.Width * 40%
+            X: =(Parent.Width / 2) - (imgLogo.Width / 2)
+            Y: =46
+            ZIndex: =1
+
+        imgLogoText As image:
+            AlignInContainer: =AlignInContainer.Center
+            BorderColor: =RGBA(32, 54, 71, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =200
+            Image: ='Fourth Coffee_logotype_x2'
+            LayoutMinHeight: =320
+            LayoutMinWidth: =320
+            Width: =Parent.Width * 80%
+            ZIndex: =2
+
+        conUserInformation As groupContainer.manualLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =0
+            Height: =100
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            ZIndex: =4
+
+            lblUserName As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(32, 54, 71, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =varTheme.font
+                FontWeight: =FontWeight.Semibold
+                Height: =45
+                Size: =22
+                Text: =varUserName
+                Width: =Parent.Width
+                Y: =lblUserLabel.Height
+                ZIndex: =1
+
+            lblUserLabel As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(32, 54, 71, 1)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =varTheme.font
+                Size: =20  
+                Text: =varLabels.StartScreen_User
+                Width: =Parent.Width
+                X: =Parent.Width/2 - Self.Width/2
+                ZIndex: =2
+
+        conStart As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =80
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            ZIndex: =6
+
+            btnStart As button:
+                BorderColor: =Color.White
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: = DisplayMode.Edit
+                Fill: =varTheme.primaryColor
+                Font: =varTheme.font
+                FontWeight: =FontWeight.Semibold
+                Height: =72
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                OnSelect: =Navigate('Select table screen', ScreenTransition.Fade);
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedFill: =Self.Fill
+                RadiusBottomLeft: =36
+                RadiusBottomRight: =36
+                RadiusTopLeft: =Self.Height/2
+                RadiusTopRight: =36
+                Size: =24
+                Text: =varLabels.StartScreen_TakeOrder
+                Width: =280
+                X: =(Parent.Width / 2) - (btnStart.Width / 2)
+                Y: =5
+                ZIndex: =1
+
+    imgLearnMore As image:
+        AccessibleLabel: =Self.Tooltip
+        BorderColor: =RGBA(32, 54, 71, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =0
+        Image: ='info page white icon'
+        OnSelect: =Navigate('Info screen', ScreenTransition.Cover);
+        PaddingBottom: =20
+        PaddingLeft: =20
+        PaddingRight: =20
+        PaddingTop: =20
+        TabIndex: =0
+        Tooltip: =varLabels.StartScreen_InfoScreen
+        X: =Parent.Width - Self.Width - 20
+        ZIndex: =8
+

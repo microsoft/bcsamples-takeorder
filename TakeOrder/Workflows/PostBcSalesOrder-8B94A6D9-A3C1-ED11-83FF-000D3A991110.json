@@ -1,0 +1,154 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_dynamicssmbsaas": {
+        "runtimeSource": "invoker",
+        "connection": {
+          "connectionReferenceLogicalName": "new_bc"
+        },
+        "api": {
+          "name": "shared_dynamicssmbsaas"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "0b72f1c1-b2f2-4ac6-b3f8-e99ef9a01c48"
+          },
+          "type": "Request",
+          "kind": "PowerAppV2",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "title": "salesOrderId",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "Please enter your input",
+                  "x-ms-content-hint": "TEXT"
+                }
+              },
+              "required": [
+                "text"
+              ]
+            }
+          }
+        }
+      },
+      "actions": {
+        "Run_action_(V3)": {
+          "runAfter": {
+            "Initialize_status_response": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "2c4e89cd-6e63-4b24-b464-be0160a17424"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_dynamicssmbsaas",
+              "operationId": "ExecuteProcedureV3",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_dynamicssmbsaas"
+            },
+            "parameters": {
+              "bcenvironment": "PowerApps",
+              "company": "dc50d5e8-f9c9-ed11-94cc-000d3a220b2f",
+              "dataset": "v2.0",
+              "procedure": "salesOrder-shipAndInvoice",
+              "parameters/id": "@triggerBody()['text']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Set_failure_status": {
+          "runAfter": {
+            "Run_action_(V3)": [
+              "Failed",
+              "Skipped",
+              "TimedOut"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "20e5f0e0-a527-437b-ac9f-0d9187692fd3"
+          },
+          "type": "SetVariable",
+          "inputs": {
+            "name": "postStatus",
+            "value": "0"
+          }
+        },
+        "Initialize_status_response": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "8dc13f60-b3e4-430d-8930-b4ff7989dd23"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "postStatus",
+                "type": "string",
+                "value": "1"
+              }
+            ]
+          }
+        },
+        "Respond_to_a_PowerApp_or_flow": {
+          "runAfter": {
+            "Set_failure_status": [
+              "Succeeded",
+              "Skipped"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "475266db-3232-48ad-9ceb-e856bb49956f"
+          },
+          "type": "Response",
+          "kind": "PowerApp",
+          "inputs": {
+            "statusCode": 200,
+            "body": {
+              "salesorderid": "@triggerBody()['text']",
+              "status": "@variables('postStatus')"
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "salesorderid": {
+                  "title": "salesOrderId",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                },
+                "status": {
+                  "title": "status",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

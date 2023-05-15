@@ -1,0 +1,9 @@
+[
+  {
+    "IsComponentScoped": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "Name": "colCurrentOrderState_CollapsedGroups",
+    "Type": "CollectionDataSourceInfo"
+  }
+]

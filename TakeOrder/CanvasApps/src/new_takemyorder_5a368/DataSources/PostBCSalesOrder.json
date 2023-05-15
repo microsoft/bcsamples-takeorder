@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "eb85f522-32cb-488a-84b7-16f5ebbfa586",
+    "Name": "PostBCSalesOrder",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": "8b94a6d9-a3c1-ed11-83ff-000d3a991110"
+  }
+]

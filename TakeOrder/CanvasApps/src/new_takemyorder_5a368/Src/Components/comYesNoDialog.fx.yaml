@@ -1,0 +1,119 @@
+comYesNoDialog As CanvasComponent:
+    behaviorNo: =true
+    behaviorYes: =true
+    DialogText: ="Are you sure you want to cancel the draft order?"
+    Fill: =Color.Transparent
+    Height: =640
+    PrimaryColor: =RGBA(0, 0, 0, 1)
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    recBackgroundOverlay As rectangle:
+        BorderColor: =RGBA(32, 54, 71, 1)
+        Fill: =RGBA(196, 196, 196, 0.7)
+        Height: =Parent.Height
+        Width: =Parent.Width
+        ZIndex: =1
+
+    conDialog As groupContainer:
+        Height: =280
+        Width: =Parent.Width - 60
+        X: =Parent.Width/2 - Self.Width/2
+        Y: =Parent.Height/2 - Self.Height/2
+        ZIndex: =2
+
+        btnBackground As button:
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(230, 230, 230, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =RGBA(255, 255, 255, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =Parent.Height -1
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Size: =24
+            Text: =""
+            Width: =Parent.Width -1
+            ZIndex: =2
+
+        lblDialogMessage As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(32, 54, 71, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =140
+            PaddingLeft: =25
+            PaddingRight: =25
+            PaddingTop: =
+            Size: =21
+            Text: =comYesNoDialog.DialogText
+            Width: =Parent.Width
+            ZIndex: =3
+
+        conButtons As groupContainer.horizontalAutoLayoutContainer:
+            Height: =btnYes.Height + 2
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =30
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width * 0.9
+            X: =Parent.Width * 0.05
+            Y: =lblDialogMessage.Height + 5
+            ZIndex: =4
+
+            btnNo As button:
+                BorderColor: =comYesNoDialog.PrimaryColor
+                Color: =comYesNoDialog.PrimaryColor
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =Color.White
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: =comYesNoDialog.behaviorNo()
+                RadiusBottomLeft: =35
+                RadiusBottomRight: =35
+                RadiusTopLeft: =35
+                RadiusTopRight: =35
+                Size: =20
+                Text: ="No"
+                Width: =188
+                X: =40
+                Y: =171
+                ZIndex: =2
+
+            btnYes As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =comYesNoDialog.PrimaryColor
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                LayoutMinHeight: =70
+                LayoutMinWidth: =280
+                OnSelect: =comYesNoDialog.behaviorYes();
+                RadiusBottomLeft: =35
+                RadiusBottomRight: =35
+                RadiusTopLeft: =35
+                RadiusTopRight: =35
+                Size: =20
+                Text: ="Yes"
+                Width: =188
+                X: =243
+                Y: =171
+                ZIndex: =3
+
