@@ -21,7 +21,7 @@ Follow the steps in the [Try our sample apps](https://github.com/microsoft/AL-Go
 
 ## Per Tenant Extension Project
 
-This repository is based on the PPPreview version of the AL-Go for GitHub template, which is available [here](https://github.com/microsoft/AL-Go-PTE).
+This repository is based on the AL-Go for GitHub PTE template, which is available [here](https://github.com/microsoft/AL-Go-PTE).
 
 ## Contributing
 
