@@ -17,11 +17,11 @@ The extension also includes a sample data page called **Take Order sample data**
 
 ## Try the sample yourself
 
-Follow the steps in the [Try our sample apps](https://github.com/BusinessCentralDemos/AL-Go/blob/main/Scenarios/TryPowerPlatformSamples.md) guide to try the sample with your own tenant.
+Follow the steps in the [Try our sample apps](https://github.com/microsoft/AL-Go/blob/PPPreview/Scenarios/TryPowerPlatformSamples.md) guide to try the sample with your own tenant.
 
 ## Per Tenant Extension Project
 
-This repository is based on the preview AL-Go for GitHub template, which is available [here](https://github.com/BusinessCentralDemos/AL-Go-PTE).
+This repository is based on the preview AL-Go for GitHub template, which is available [here](https://github.com/microsoft/AL-Go-PTE). During the Preview phase, you will have to create a secret called GhTokenWorkflow (steps 4-7 [here](https://github.com/microsoft/AL-Go/blob/PPPreview/Scenarios/UpdateAlGoSystemFiles.md)) and run the Upgrade AL-Go System Files with **microsoft/AL-Go-PTE@PPPreview** in the template URL after creating the repository. 
 
 ## Contributing
 
