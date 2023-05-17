@@ -87,7 +87,7 @@ jobs:
           Add-Content -Path $env:GITHUB_ENV -Value "powerPlatformSolutionFolder=$solutionName"   
 
       - name: Export changes from Power Platform 
-        uses: andersgMSFT/AL-Go-Actions/PullPowerPlatformChanges@fixPPWorkFLows
+        uses: microsoft/AL-Go-Actions/PullPowerPlatformChanges@PPPreview
         with: 
           shell: powershell
           solutionName: ${{ env.powerPlatformSolutionFolder }}

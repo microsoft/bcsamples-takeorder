@@ -92,7 +92,7 @@ jobs:
 
       - name: Build PowerPlatform Solution
         id: BuildPowerPlatform
-        uses: andersgMSFT/AL-Go-Actions/BuildPowerPlatform@fixPPWorkFLows
+        uses: microsoft/AL-Go-Actions/BuildPowerPlatform@PPPreview
         with:
           shell: powershell
           parentTelemetryScopeJson: ${{ needs.Initialization.outputs.telemetryScopeJson }}
@@ -103,7 +103,7 @@ jobs:
           companyId: ${{ env.companyId }}
       
       - name: Export and push changes to Power Platform
-        uses: andersgMSFT/AL-Go-Actions/DeployPowerPlatform@fixPPWorkFLows
+        uses: microsoft/AL-Go-Actions/DeployPowerPlatform@PPPreview
         with:
           shell: powershell
           parentTelemetryScopeJson: ${{ needs.Initialization.outputs.telemetryScopeJson }}
