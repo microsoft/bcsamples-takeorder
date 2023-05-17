@@ -6,7 +6,7 @@
         Clear(colSelectedItems);
         Clear(colOrderSummary);
         
-        Set(varSelectedItemGroup, Blank());
+        Set(varSelectedItemGroupIndex, Blank());
         Set(varAddItemsToCurrentOrder, Blank());
         Set(varActiveorderForSelectedTable, Blank());
         
@@ -74,7 +74,6 @@
             TabIndex: =0
             TemplatePadding: =0
             TemplateSize: =140
-            Transition: =Transition.Push
             Y: =
             ZIndex: =4
 
@@ -112,7 +111,7 @@
                 Size: =24
                 Text: =ThisItem.displayName
                 Width: =Parent.TemplateWidth - 160
-                X: =120
+                X: =130
                 Y: =30
                 ZIndex: =3
 

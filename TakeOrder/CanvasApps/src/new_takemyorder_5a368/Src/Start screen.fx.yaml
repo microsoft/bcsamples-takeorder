@@ -4,7 +4,7 @@
     OnVisible: =
 
     conStartScreenContent As groupContainer.verticalAutoLayoutContainer:
-        Height: =Parent.Height -imgLearnMore.Height - 90 
+        Height: =Parent.Height - Self.Y - 110 + conStart.Height/2
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutGap: =10
@@ -75,7 +75,7 @@
 
         conStart As groupContainer.manualLayoutContainer:
             FillPortions: =0
-            Height: =80
+            Height: =85
             LayoutMinHeight: =112
             LayoutMinWidth: =250
             ZIndex: =6
@@ -89,7 +89,7 @@
                 Fill: =varTheme.primaryColor
                 Font: =varTheme.font
                 FontWeight: =FontWeight.Semibold
-                Height: =72
+                Height: =80
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
                 OnSelect: =Navigate('Select table screen', ScreenTransition.Fade);
@@ -97,15 +97,15 @@
                 PaddingRight: =0
                 PaddingTop: =0
                 PressedFill: =Self.Fill
-                RadiusBottomLeft: =36
-                RadiusBottomRight: =36
+                RadiusBottomLeft: =Self.Height/2
+                RadiusBottomRight: =Self.Height/2
                 RadiusTopLeft: =Self.Height/2
-                RadiusTopRight: =36
+                RadiusTopRight: =Self.Height/2
                 Size: =24
                 Text: =varLabels.StartScreen_TakeOrder
                 Width: =280
                 X: =(Parent.Width / 2) - (btnStart.Width / 2)
-                Y: =5
+                Y: =2
                 ZIndex: =1
 
     imgLearnMore As image:
@@ -122,6 +122,6 @@
         PaddingTop: =20
         TabIndex: =0
         Tooltip: =varLabels.StartScreen_InfoScreen
-        X: =Parent.Width - Self.Width - 20
+        X: =Parent.Width - Self.Width 
         ZIndex: =8
 
