@@ -250,7 +250,7 @@ jobs:
       - name: Build PowerPlatform Solution
         id: BuildPowerPlatform
         if: matrix.project == env.powerPlatformSolutionFolder && matrix.buildMode == 'default'
-        uses: microsoft/AL-Go-Actions/BuildPowerPlatform@PPPreview
+        uses: andersgMSFT/AL-Go-Actions/BuildPowerPlatform@fixPPWorkFLows
         with:
           shell: ${{ needs.Initialization.outputs.githubRunnerShell }}
           parentTelemetryScopeJson: ${{ needs.Initialization.outputs.telemetryScopeJson }}
@@ -511,7 +511,7 @@ jobs:
 
       - name: Deploy PowerPlatform
         if: ${{ steps.authContext.outputs.deployPP == 'true' }}
-        uses: microsoft/AL-Go-Actions/DeployPowerPlatform@PPPreview
+        uses: andersgMSFT/AL-Go-Actions/DeployPowerPlatform@fixPPWorkFLows
         with:
           shell: ${{ needs.Initialization.outputs.githubRunnerShell }}
           parentTelemetryScopeJson: ${{ needs.Initialization.outputs.telemetryScopeJson }}
