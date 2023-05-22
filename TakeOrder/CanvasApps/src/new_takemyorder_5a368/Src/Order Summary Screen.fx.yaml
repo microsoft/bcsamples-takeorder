@@ -32,7 +32,6 @@
         TabIndex: =0
         TemplatePadding: =0
         TemplateSize: =123
-        Transition: =Transition.Push
         Visible: =Not(ctxShowLoadingScreen)
         Width: =Parent.Width - 60
         X: =30
@@ -606,7 +605,6 @@
             ClearCollect(colSelectedItems, Blank());
             Set(varAddItemsToCurrentOrder, false);
             UpdateContext({ctxShowLoadingScreen: false});
-            Notify(varLabels.SummaryScreen_OrderUpdatedMessage & varSelectedTable.displayName);
             Navigate('Action Success Screen', ScreenTransition.Fade);
         RadiusBottomLeft: =Self.Height/2
         RadiusBottomRight: =Self.Height/2
@@ -672,10 +670,10 @@
         ZIndex: =5
 
     conActiveOrderButtons As groupContainer:
-        Height: =72
+        Height: =75
         Visible: =And(ctxHasOrderBeenCreated, Not(varAddItemsToCurrentOrder))
         Width: =Parent.Width
-        Y: =Parent.Height - Self.Height - 45
+        Y: =Parent.Height - Self.Height - 70
         ZIndex: =6
 
         btnAddMoreCurrentOrder As button:

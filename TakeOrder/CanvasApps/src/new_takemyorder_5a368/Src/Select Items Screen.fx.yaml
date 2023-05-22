@@ -4,10 +4,10 @@
         =UpdateContext({ctxItemShowingQuantityControl: Blank()});
         ClearCollect(colAvailableItems, Filter('itemsWithImage (businessCentralDemos/TakeOrder/beta)', 'Sold In Restaurant'));
         
-        // Select first entry - unless a value is already selected
-        If(IsBlank(varSelectedItemGroup), 
-            Select(galItemGroups, 1);
-        );
+        // Set selected item group if no one is selected
+        If(IsBlank(varSelectedItemGroupIndex),
+            Set(varSelectedItemGroupIndex, 0)
+        )
 
     conButtom As groupContainer.manualLayoutContainer:
         Height: =110
@@ -83,9 +83,9 @@
             Height: =Parent.Height
             Items: |-
                 =Filter(colAvailableItems, 
-                    If(IsBlank(varSelectedItemGroup), 
+                    If(varSelectedItemGroupIndex = 0, 
                         true, 
-                        'Item Category Name' = varSelectedItemGroup
+                        'Item Category Name' = Index(colItemGroup, varSelectedItemGroupIndex).Value
                     )
                 )
             Layout: =Layout.Vertical
@@ -145,7 +145,7 @@
                 ImagePosition: =ImagePosition.Stretch
                 OnSelect: =Select(Parent)
                 Width: =80
-                X: =30  
+                X: =20
                 Y: =30
                 ZIndex: =3
 
@@ -191,7 +191,7 @@
                 Text: =ThisItem.'Display Name'
                 VerticalAlign: =VerticalAlign.Top
                 Width: =371
-                X: =135
+                X: =130
                 Y: =imgItemImage.Y
                 ZIndex: =6
 
@@ -495,61 +495,202 @@
         Width: =Parent.Width
         ZIndex: =3
 
-        galItemGroups As gallery.galleryHorizontal:
-            AccessibleLabel: =varLabels.TakeOrderScreen_FilterGallery
-            BorderColor: =RGBA(32, 54, 71, 1)
-            FocusedBorderThickness: =0
-            Height: =70
-            Items: =colItemGroup
-            OnSelect: |-
-                =UpdateContext({ctxItemShowingQuantityControl: Blank()});
-                If(ThisItem.Value = First(colItemGroup).Value, 
-                    Set(varSelectedItemGroup, Blank())
-                    ,
-                    Set(varSelectedItemGroup, ThisItem.Value)
-                )
-            ShowScrollbar: =false
-            TabIndex: =0
-            TemplateSize: =(Parent.Width / 4) - 10
-            Width: =Parent.Width
+        conItemGroupFilter As groupContainer.horizontalAutoLayoutContainer:
+            Height: =60
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width - 20
+            X: =10
             Y: =Parent.Height - Self.Height
             ZIndex: =1
 
-            recItemGroupUnderline As rectangle:
-                BorderColor: =RGBA(32, 54, 71, 1)
-                Fill: =varTheme.primaryColor
-                Height: =5
-                OnSelect: =Select(Parent)
-                Visible: =ThisItem.IsSelected
-                Width: =btnItemGroup.Width - 20
-                X: =10
-                Y: =50
+            conBtnFullMenu As groupContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                FillPortions: =0
+                Height: =55
+                LayoutMinHeight: =112
+                LayoutMinWidth: =250
+                Width: =btnItemGroup.Width + 10
+                Y: =100
                 ZIndex: =1
 
-            btnItemGroup As button:
-                BorderColor: =Color.Transparent
-                BorderThickness: =0
-                Color: =varTheme.textColor
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Fill: =RGBA(0, 0, 0, 0)
-                Font: =varTheme.font
-                FontWeight: =If(ThisItem.IsSelected, FontWeight.Bold, FontWeight.Semibold)
-                Height: =50
-                HoverBorderColor: =Color.Transparent
-                HoverColor: =RGBA(0, 0, 0, 1)
-                HoverFill: =Color.Transparent
-                OnSelect: =Select(Parent)
-                PaddingLeft: =0
-                PaddingRight: =0
-                PressedBorderColor: =Color.Transparent
-                PressedColor: =Color.Black
-                PressedFill: =Color.Transparent
-                Size: =18
-                Text: =ThisItem.Value
-                Width: =152
+                recItemGroupUnderline As rectangle:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    Fill: =varTheme.primaryColor
+                    Height: =5
+                    OnSelect: =
+                    Visible: =varSelectedItemGroupIndex = 0
+                    Width: =btnItemGroup.Width - 20
+                    X: =Parent.Width/2 - Self.Width/2
+                    Y: =Parent.Height - Self.Height
+                    ZIndex: =1
+
+                btnItemGroup As button:
+                    BorderColor: =Color.Transparent
+                    BorderThickness: =0
+                    Color: =varTheme.textColor
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Font: =varTheme.font
+                    FontWeight: =If(varSelectedItemGroupIndex = 0, FontWeight.Bold, FontWeight.Semibold)
+                    Height: =50
+                    HoverBorderColor: =Color.Transparent
+                    HoverColor: =RGBA(0, 0, 0, 1)
+                    HoverFill: =Color.Transparent
+                    OnSelect: =Set(varSelectedItemGroupIndex, 0);
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PressedBorderColor: =Color.Transparent
+                    PressedColor: =Color.Black
+                    PressedFill: =Color.Transparent
+                    Size: =18
+                    Text: =varLabels.TakeOrderScreen_FullMenu
+                    Width: =152
+                    X: =Parent.Width/2 - Self.Width/2
+                    ZIndex: =2
+
+            conBtnOption1 As groupContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                FillPortions: =0
+                Height: =55
+                LayoutMinHeight: =112
+                LayoutMinWidth: =250
+                Width: =btnItemGroupOption1.Width + 10
+                Y: =100
                 ZIndex: =2
+
+                recItemGroupUnderline1 As rectangle:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    Fill: =varTheme.primaryColor
+                    Height: =5
+                    OnSelect: =
+                    Visible: =varSelectedItemGroupIndex = 1
+                    Width: =btnItemGroupOption1.Width - 20
+                    X: =Parent.Width/2 - Self.Width/2
+                    Y: =Parent.Height - Self.Height
+                    ZIndex: =1
+
+                btnItemGroupOption1 As button:
+                    BorderColor: =Color.Transparent
+                    BorderThickness: =0
+                    Color: =varTheme.textColor
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Font: =varTheme.font
+                    FontWeight: =If(varSelectedItemGroupIndex = 1, FontWeight.Bold, FontWeight.Semibold)
+                    Height: =50
+                    HoverBorderColor: =Color.Transparent
+                    HoverColor: =RGBA(0, 0, 0, 1)
+                    HoverFill: =Color.Transparent
+                    OnSelect: =Set(varSelectedItemGroupIndex, 1);
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PressedBorderColor: =Color.Transparent
+                    PressedColor: =Color.Black
+                    PressedFill: =Color.Transparent
+                    Size: =18
+                    Text: =Index(colItemGroup, 1).Value
+                    Width: =165
+                    X: =Parent.Width/2 - Self.Width/2
+                    ZIndex: =2
+
+            conBtnOption2 As groupContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                FillPortions: =0
+                Height: =55
+                LayoutMinHeight: =112
+                LayoutMinWidth: =250
+                Width: =btnItemGroup_2.Width + 10
+                Y: =100
+                ZIndex: =3
+
+                recItemGroupUnderline_2 As rectangle:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    Fill: =varTheme.primaryColor
+                    Height: =5
+                    OnSelect: =
+                    Visible: =varSelectedItemGroupIndex = 2
+                    Width: =btnItemGroup_2.Width - 20
+                    X: =Parent.Width/2 - Self.Width/2
+                    Y: =Parent.Height - Self.Height
+                    ZIndex: =1
+
+                btnItemGroup_2 As button:
+                    BorderColor: =Color.Transparent
+                    BorderThickness: =0
+                    Color: =varTheme.textColor
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Font: =varTheme.font
+                    FontWeight: =If(varSelectedItemGroupIndex = 2, FontWeight.Bold, FontWeight.Semibold)
+                    Height: =50
+                    HoverBorderColor: =Color.Transparent
+                    HoverColor: =RGBA(0, 0, 0, 1)
+                    HoverFill: =Color.Transparent
+                    OnSelect: =Set(varSelectedItemGroupIndex, 2);
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PressedBorderColor: =Color.Transparent
+                    PressedColor: =Color.Black
+                    PressedFill: =Color.Transparent
+                    Size: =18
+                    Text: =Index(colItemGroup, 2).Value
+                    Width: =152
+                    X: =Parent.Width/2 - Self.Width/2
+                    ZIndex: =2
+
+            conBtnOption3 As groupContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                FillPortions: =0
+                Height: =55
+                LayoutMinHeight: =112
+                LayoutMinWidth: =250
+                Width: =btnItemGroup_3.Width + 10
+                Y: =100
+                ZIndex: =4
+
+                recItemGroupUnderline_3 As rectangle:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    Fill: =varTheme.primaryColor
+                    Height: =5
+                    OnSelect: =
+                    Visible: =varSelectedItemGroupIndex = 3
+                    Width: =btnItemGroup_3.Width - 20
+                    X: =Parent.Width/2 - Self.Width/2
+                    Y: =Parent.Height - Self.Height
+                    ZIndex: =1
+
+                btnItemGroup_3 As button:
+                    BorderColor: =Color.Transparent
+                    BorderThickness: =0
+                    Color: =varTheme.textColor
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Font: =varTheme.font
+                    FontWeight: =If(varSelectedItemGroupIndex = 3, FontWeight.Bold, FontWeight.Semibold)
+                    Height: =50
+                    HoverBorderColor: =Color.Transparent
+                    HoverColor: =RGBA(0, 0, 0, 1)
+                    HoverFill: =Color.Transparent
+                    OnSelect: =Set(varSelectedItemGroupIndex, 3);
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PressedBorderColor: =Color.Transparent
+                    PressedColor: =Color.Black
+                    PressedFill: =Color.Transparent
+                    Size: =18
+                    Text: =Index(colItemGroup, 3).Value
+                    Width: =100
+                    X: =Parent.Width/2 - Self.Width/2
+                    ZIndex: =2
 
         lblSelectItemsHeader As label:
             Align: =Align.Center
@@ -562,8 +703,8 @@
             Size: =28
             Text: =varSelectedTable.displayName
             Width: =Parent.Width
-            Y: =15
-            ZIndex: =2
+            Y: =17
+            ZIndex: =3
 
         imgCancelSelection As image:
             AccessibleLabel: =Self.Tooltip
@@ -605,7 +746,7 @@
             TabIndex: =0
             Tooltip: =If(Sum(colSelectedItems, quantity) > 0, varLabels.TakeOrderScreen_Delete, varLabels.TakeOrderScreen_Close)
             Transparency: =If(Self.DisplayMode = DisplayMode.Disabled, 60%, 0)
-            X: =Parent.Width - Self.Width - 20
+            X: =Parent.Width - Self.Width 
             ZIndex: =4
 
     btnReviewSelectedItems As button:
@@ -616,7 +757,7 @@
         Fill: =varTheme.primaryColor
         Font: =varTheme.font
         FontWeight: =FontWeight.Semibold
-        Height: =70
+        Height: =80
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
         OnSelect: |-

@@ -45,7 +45,7 @@ page 70010 "TO - SamplePage"
             action(GenerateTestData)
             {
                 ApplicationArea = All;
-                Caption = 'Generate sample Data';
+                Caption = 'Generate or update sample Data';
                 trigger OnAction()
                 var
                     sampleDataGenerator: Codeunit "TO - SampleDataGenerator";

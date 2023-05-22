@@ -94,6 +94,22 @@ codeunit 70012 "TO - LabelManagement"
         TakeOrderScreen_ItemGallery: Label 'TakeOrderScreen_ItemGallery', Locked = true;
         TakeOrderScreen_ItemGallery_ValueTxt: Label 'A gallery with the available items';
 
+        ItemScreen_Title: Label 'ItemScreen_Title', Locked = true;
+        ItemScreen_Title_ValueTxt: Label 'Item details';
+
+        ItemScreen_Close: Label 'ItemScreen_Close', Locked = true;
+        ItemScreen_Close_ValueTxt: Label 'Close the page';
+
+        ItemScreen_Description: Label 'ItemScreen_Description', Locked = true;
+        ItemScreen_Description_ValueTxt: Label 'Description';
+
+        ItemScreen_Allergens: Label 'ItemScreen_Allergens', Locked = true;
+        ItemScreen_Allergens_ValueTxt: Label 'Allergens';
+
+
+        ItemScreen_Facts: Label 'ItemScreen_Facts', Locked = true;
+        ItemScreen_Facts_ValueTxt: Label 'Coffee Facts';
+
         SummaryScreen_Delete: Label 'SummaryScreen_Delete', Locked = true;
         SummaryScreen_Delete_ValueTxt: Label 'Delete the order';
 
@@ -203,6 +219,11 @@ codeunit 70012 "TO - LabelManagement"
         InsertLabel(TempPowerAppsLabels, TakeOrderScreen_Delete, TakeOrderScreen_Delete_ValueTxt, languageFilter);
         InsertLabel(TempPowerAppsLabels, TakeOrderScreen_FilterGallery, TakeOrderScreen_FilterGallery_ValueTxt, languageFilter);
         InsertLabel(TempPowerAppsLabels, TakeOrderScreen_ItemGallery, TakeOrderScreen_ItemGallery_ValueTxt, languageFilter);
+        InsertLabel(TempPowerAppsLabels, ItemScreen_Title, ItemScreen_Title_ValueTxt, languageFilter);
+        InsertLabel(TempPowerAppsLabels, ItemScreen_Close, ItemScreen_Close_ValueTxt, languageFilter);
+        InsertLabel(TempPowerAppsLabels, ItemScreen_Description, ItemScreen_Description_ValueTxt, languageFilter);
+        InsertLabel(TempPowerAppsLabels, ItemScreen_Allergens, ItemScreen_Allergens_ValueTxt, languageFilter);
+        InsertLabel(TempPowerAppsLabels, ItemScreen_Facts, ItemScreen_Facts_ValueTxt, languageFilter);
         InsertLabel(TempPowerAppsLabels, SummaryScreen_Delete, SummaryScreen_Delete_ValueTxt, languageFilter);
         InsertLabel(TempPowerAppsLabels, SummaryScreen_Back, SummaryScreen_Back_ValueTxt, languageFilter);
         InsertLabel(TempPowerAppsLabels, SummaryScreen_Submit, SummaryScreen_Submit_ValueTxt, languageFilter);

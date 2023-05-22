@@ -51,9 +51,13 @@ page 70011 "TO - ItemWithImage"
                 {
                     Caption = 'Sold In Restaurant';
                 }
-                field(LongItemDescription; Rec.LongItemDescription)
+                field(ShortItemDescription; Rec.ShortItemDescription)
                 {
-                    Caption = 'Long Item Description';
+                    Caption = 'Short Item Description';
+                }
+                field(Facts; Rec.Facts)
+                {
+                    Caption = 'Facts';
                 }
                 field(AllergenInformation; Rec.AllergenInformation)
                 {

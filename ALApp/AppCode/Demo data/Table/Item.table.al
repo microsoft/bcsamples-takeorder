@@ -7,14 +7,19 @@ tableextension 70011 "TO - Item" extends Item
             Caption = 'Is Item sold in Restaurant';
             DataClassification = CustomerContent;
         }
-        field(70011; LongItemDescription; Text[1000])
+        field(70011; ShortItemDescription; Text[1000])
         {
-            Caption = 'Long Item Description';
+            Caption = 'Short Item Description';
             DataClassification = CustomerContent;
         }
         field(70012; AllergenInformation; Text[1000])
         {
             Caption = 'Allergen Information';
+            DataClassification = CustomerContent;
+        }
+        field(70013; Facts; Text[1000])
+        {
+            Caption = 'Coffee facts';
             DataClassification = CustomerContent;
         }
     }

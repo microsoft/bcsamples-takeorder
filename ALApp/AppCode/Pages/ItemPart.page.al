@@ -22,11 +22,15 @@ page 70015 "TO - ItemListPart"
                 {
                     ApplicationArea = All;
                 }
-                field("Item Category Code"; Rec."Item Category Code")
+                field(ItemCategoryCode; Rec."Item Category Code")
                 {
                     ApplicationArea = All;
                 }
-                field("longDescription"; Rec.LongItemDescription)
+                field(ShortDescription; Rec.ShortItemDescription)
+                {
+                    ApplicationArea = All;
+                }
+                field(Facts; Rec.Facts)
                 {
                     ApplicationArea = All;
                 }

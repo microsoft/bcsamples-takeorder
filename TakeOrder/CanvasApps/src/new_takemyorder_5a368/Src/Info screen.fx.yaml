@@ -80,7 +80,7 @@
 
         lblInfoLink As label:
             BorderColor: =RGBA(0, 18, 107, 1)
-            Color: =RGBA(50, 86, 160, 1)
+            Color: =varTheme.primaryColor
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =1
             Font: =varTheme.font
@@ -108,12 +108,12 @@
         FocusedBorderThickness: =0
         Image: ='dismiss icon'
         OnSelect: =Back(ScreenTransition.UnCoverRight);
-        PaddingBottom: =20
-        PaddingLeft: =20
-        PaddingRight: =20
-        PaddingTop: =20
+        PaddingBottom: =25
+        PaddingLeft: =25
+        PaddingRight: =25
+        PaddingTop: =25
         TabIndex: =0
         Tooltip: =varLabels.InfoScreen_Close
-        X: =Parent.Width - Self.Width - 20
+        X: =Parent.Width - Self.Width 
         ZIndex: =2
 

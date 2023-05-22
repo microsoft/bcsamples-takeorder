@@ -43,7 +43,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 FocusedBorderThickness: =0
-                Image: ='dismiss icon'
+                Image: ='back arrow'
                 OnSelect: |-
                     =UpdateContext({ctxShowItemQuantityControl: false});
                     
@@ -58,7 +58,7 @@
                 PaddingTop: =30
                 TabIndex: =0
                 Tooltip: =varLabels.InfoScreen_Close
-                X: =Parent.Width - Self.Width 
+                X: =15
                 Y: =5
                 ZIndex: =4
 
@@ -126,7 +126,7 @@
                     =And(Not(ctxShowItemQuantityControl), LookUp(colSelectedItems, id = ctxSelectedItem.id).quantity > 0)
                         
                 Width: =60
-                X: =Parent.Width - (btnQuantityItemDetails.Width/2) - 50
+                X: =Parent.Width - (btnQuantityItemDetails.Width/2) - 70
                 Y: =Parent.Height/2 - Self.Height/2
                 ZIndex: =3
 
@@ -179,7 +179,7 @@
                 Tooltip: =
                 Visible: =Not(btnQuantityItemDetails.Visible)
                 Width: =80  
-                X: =Parent.Width - Self.Width -10
+                X: =Parent.Width - Self.Width -30
                 Y: =Parent.Height/2 - Self.Height/2
                 ZIndex: =4
 
@@ -202,7 +202,7 @@
                 Visible: |
                     =ctxShowItemQuantityControl 
                 Width: =275
-                X: =Parent.Width - 280
+                X: =Parent.Width - 280 -20
                 Y: =Parent.Height/2 - Self.Height/2
                 ZIndex: =6
 
@@ -410,6 +410,7 @@
                 BorderColor: =RGBA(32, 54, 71, 1)
                 Fill: =RGBA(255, 188, 0, 0.08)
                 Height: =imgItemDetailsImage.Height
+                Tooltip: =varLabels.ItemImageText & ctxItemDetails.'Display Name'
                 Visible: =false
                 Width: =imgItemDetailsImage.Width
                 X: =imgItemDetailsImage.X
@@ -447,22 +448,118 @@
                 Width: =Parent.Width
                 ZIndex: =1
 
+                lblIItemDescription As label:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =varTheme.font
+                    FontWeight: =FontWeight.Semibold
+                    Height: =45
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =560
+                    LineHeight: =1.4
+                    Size: =21
+                    Text: =varLabels.ItemScreen_Description
+                    Width: =560
+                    X: =40
+                    Y: =40
+                    ZIndex: =1
+
+                txtItemDescription As text:
+                    AccessibleLabel: =Self.Text
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    BorderThickness: =2
+                    Color: =RGBA(0, 0, 0, 1)
+                    Default: =ctxItemDetails.'Short Item Description'
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    DisplayMode: =DisplayMode.View
+                    FocusedBorderThickness: =4
+                    Font: =varTheme.font
+                    Height: =80
+                    HoverBorderColor: =RGBA(32, 54, 71, 1)
+                    HoverColor: =RGBA(0, 0, 0, 1)
+                    HoverFill: =RGBA(205, 209, 213, 1)
+                    Italic: =true
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =560
+                    LineHeight: =1.4
+                    Mode: =TextMode.MultiLine
+                    PaddingLeft: =5
+                    PaddingTop: =0
+                    Size: =21
+                    TabIndex: =0   
+                    Width: =Parent.Width - 60
+                    X: =(Parent.Width - Self.Width) /2
+                    ZIndex: =2
+
+                lblItemFacts As label:
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =varTheme.font
+                    FontWeight: =FontWeight.Semibold
+                    Height: =45
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =560
+                    LineHeight: =1.4
+                    Size: =21
+                    Text: =varLabels.ItemScreen_Facts
+                    Visible: =ctxItemDetails.Facts <> ""
+                    Width: =560
+                    X: =40
+                    Y: =40
+                    ZIndex: =3
+
+                txtItemFacts As text:
+                    AccessibleLabel: =Self.Text
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderColor: =RGBA(32, 54, 71, 1)
+                    BorderThickness: =2
+                    Color: =RGBA(0, 0, 0, 1)
+                    Default: =ctxItemDetails.Facts
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    DisplayMode: =DisplayMode.View
+                    FocusedBorderThickness: =4
+                    Font: =varTheme.font
+                    Height: =150
+                    HoverBorderColor: =RGBA(32, 54, 71, 1)
+                    HoverColor: =RGBA(0, 0, 0, 1)
+                    HoverFill: =RGBA(205, 209, 213, 1)
+                    Italic: =true
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =560
+                    LineHeight: =1.4
+                    Mode: =TextMode.MultiLine
+                    PaddingLeft: =5
+                    PaddingTop: =0
+                    Size: =21
+                    Visible: =ctxItemDetails.Facts <> ""
+                    Width: =Parent.Width - 60
+                    X: =(Parent.Width - Self.Width) /2
+                    ZIndex: =4
+
                 lblItemAllergens As label:
                     BorderColor: =RGBA(32, 54, 71, 1)
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     Font: =varTheme.font
                     FontWeight: =FontWeight.Semibold
-                    Height: =50
+                    Height: =45
                     LayoutMinHeight: =70
                     LayoutMinWidth: =560
-                    Size: =24
-                    Text: ="Allergens"
+                    LineHeight: =1.4
+                    Size: =21
+                    Text: =varLabels.ItemScreen_Allergens
                     Visible: =ctxItemDetails.'Allergen Information' <> ""
                     Width: =560
                     X: =40
                     Y: =40
-                    ZIndex: =1
+                    ZIndex: =5
 
                 txtItemAllergens As text:
                     AccessibleLabel: =Self.Text
@@ -475,6 +572,7 @@
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
                     DisplayMode: =DisplayMode.View
+                    FillPortions: =1
                     FocusedBorderThickness: =4
                     Font: =varTheme.font
                     Height: =90
@@ -484,41 +582,15 @@
                     Italic: =true
                     LayoutMinHeight: =70
                     LayoutMinWidth: =560
+                    LineHeight: =1.4
                     Mode: =TextMode.MultiLine
                     PaddingLeft: =5
-                    Size: =24
+                    PaddingTop: =0
+                    Size: =21
                     Visible: =ctxItemDetails.'Allergen Information' <> ""
                     Width: =Parent.Width - 60
                     X: =(Parent.Width - Self.Width) /2
-                    ZIndex: =2
-
-                txtItemLongDescription As text:
-                    AccessibleLabel: =Self.Text
-                    AlignInContainer: =AlignInContainer.Stretch
-                    BorderColor: =RGBA(32, 54, 71, 1)
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    Default: =ctxItemDetails.'Long Item Description'
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    DisplayMode: =DisplayMode.View
-                    FocusedBorderThickness: =4
-                    Font: =varTheme.font
-                    Height: =170
-                    HoverBorderColor: =RGBA(32, 54, 71, 1)
-                    HoverColor: =RGBA(0, 0, 0, 1)
-                    HoverFill: =RGBA(205, 209, 213, 1)
-                    Italic: =true
-                    LayoutMinHeight: =70
-                    LayoutMinWidth: =560
-                    Mode: =TextMode.MultiLine
-                    PaddingLeft: =5
-                    Size: =24
-                    TabIndex: =0   
-                    Width: =Parent.Width - 60
-                    X: =(Parent.Width - Self.Width) /2
-                    ZIndex: =3
+                    ZIndex: =6
 
             recItemQuantityOverlayExtraInfo As rectangle:
                 AccessibleLabel: =Self.Tooltip

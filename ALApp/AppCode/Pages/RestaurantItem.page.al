@@ -19,7 +19,7 @@ pageextension 70012 "TO - RestaurantItem" extends "Item Card"
                     ApplicationArea = All;
                     MultiLine = true;
                 }
-                field(LongItemDescription; Rec.LongItemDescription)
+                field(LongItemDescription; Rec.ShortItemDescription)
                 {
                     Caption = 'Long Item Description';
                     ToolTip = 'Enter the long item description for the item.';
