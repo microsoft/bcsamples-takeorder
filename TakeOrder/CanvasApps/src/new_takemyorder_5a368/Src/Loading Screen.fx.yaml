@@ -4,7 +4,7 @@
     OnVisible: =
 
     conPlaceholder As groupContainer.verticalAutoLayoutContainer:
-        Height: =Parent.Height -imgLearnMorePlaceholder.Height - 90 
+        Height: =Parent.Height - Self.Y - 110 + conStart.Height/2
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutGap: =10
@@ -78,35 +78,41 @@
                 X: =Parent.Width/2 - Self.Width/2
                 ZIndex: =2
 
-        btnStart_1 As button:
-            BorderColor: =Color.White
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =Self.Color
-            DisabledFill: =Self.Fill
-            DisplayMode: =DisplayMode.Disabled
-            Fill: =varTheme.primaryColor
-            Font: =varTheme.font
-            FontWeight: =FontWeight.Semibold
-            Height: =72
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
-            LayoutMinHeight: =70
-            LayoutMinWidth: =280
-            OnSelect: =Navigate('Select table screen', ScreenTransition.Cover);
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            RadiusBottomLeft: =35
-            RadiusBottomRight: =35
-            RadiusTopLeft: =35
-            RadiusTopRight: =35
-            Size: =24
-            Text: =varLabels.StartScreen_TakeOrder
-            Width: =280
-            X: =(Parent.Width / 2) - (btnStart_1.Width / 2)
-            Y: =Parent.Height - 120
-            ZIndex: =5
+        conStart_1 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =85
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            Y: =20
+            ZIndex: =6
+
+            btnStart_2 As button:
+                BorderColor: =Color.White
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: = DisplayMode.Edit
+                Fill: =varTheme.primaryColor
+                Font: =varTheme.font
+                FontWeight: =FontWeight.Semibold
+                Height: =80
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(100, 118, 132, 1), -20%)
+                OnSelect: =Navigate('Select table screen', ScreenTransition.Fade);
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedFill: =Self.Fill
+                RadiusBottomLeft: =Self.Height/2
+                RadiusBottomRight: =Self.Height/2
+                RadiusTopLeft: =Self.Height/2
+                RadiusTopRight: =Self.Height/2
+                Size: =24
+                Text: =varLabels.StartScreen_TakeOrder
+                Width: =280
+                X: =(Parent.Width / 2) - (btnStart_2.Width / 2)
+                Y: =2
+                ZIndex: =1
 
     imgLearnMorePlaceholder As image:
         BorderColor: =RGBA(32, 54, 71, 1)
@@ -164,7 +170,12 @@
                 TakeOrderScreen_Close: LookUp(varLanguageResources, labelId = "TakeOrderScreen_Close").DisplayName,                
                 TakeOrderScreen_ItemGallery: LookUp(varLanguageResources, labelId = "TakeOrderScreen_ItemGallery").DisplayName,                
                 TakeOrderScreen_FilterGallery: LookUp(varLanguageResources, labelId = "TakeOrderScreen_FilterGallery").DisplayName,                
-                TakeOrderScreen_Delete: LookUp(varLanguageResources, labelId = "TakeOrderScreen_Delete").DisplayName,                
+                TakeOrderScreen_Delete: LookUp(varLanguageResources, labelId = "TakeOrderScreen_Delete").DisplayName,        
+                ItemScreen_Title: LookUp(varLanguageResources, labelId = "ItemScreen_Title").DisplayName,
+                ItemScreen_Close: LookUp(varLanguageResources, labelId = "ItemScreen_Close").DisplayName,
+                ItemScreen_Description: LookUp(varLanguageResources, labelId = "ItemScreen_Description").DisplayName,
+                ItemScreen_Allergens: LookUp(varLanguageResources, labelId = "ItemScreen_Allergens").DisplayName,           
+                ItemScreen_Facts: LookUp(varLanguageResources, labelId = "ItemScreen_Facts").DisplayName,           
                 SummaryScreen_Delete: LookUp(varLanguageResources, labelId = "SummaryScreen_Delete").DisplayName,               
                 SummaryScreen_Back: LookUp(varLanguageResources, labelId = "SummaryScreen_Back").DisplayName,                 
                 SummaryScreen_Submit: LookUp(varLanguageResources, labelId = "SummaryScreen_Submit").DisplayName,                 
@@ -183,12 +194,11 @@
             });
             
             // Set up data
-            ClearCollect(colItemGroup, varLabels.TakeOrderScreen_FullMenu);
             Concurrent(
                 Set(varUserName,User().FullName),
                 Set(varBcCompany,First('localeInformations (businessCentralDemos/TakeOrder/beta)')),
                 Set(varTables, Filter('tables (businessCentralDemos/TakeOrder/beta)', IsTable)),
-                Collect(colItemGroup, Distinct(Filter('itemsWithImage (businessCentralDemos/TakeOrder/beta)', 'Sold In Restaurant'), itemCategoryName))
+                ClearCollect(colItemGroup, Distinct(Filter('itemsWithImage (businessCentralDemos/TakeOrder/beta)', 'Sold In Restaurant'), itemCategoryName))
             );
             
             Set(varCompanyName,varBcCompany.DisplayName);
