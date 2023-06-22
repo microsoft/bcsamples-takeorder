@@ -23,7 +23,7 @@
     "companyId": "14bce256-55e9-ed11-8850-6045bde98bba",
     "ppEnvironmentUrl": "https://org36168d50.crm.dynamics.com/"
   },
-  "DeployToSBcTechDays":
+  "DeployToBcTechDays":
   {
     "environmentName": "Sandbox",
     "companyId": "1536b51a-7d00-ee11-8f75-6045bdacccd6",
