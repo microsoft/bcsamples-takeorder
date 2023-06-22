@@ -6,7 +6,7 @@
     "Dev (Production)",
     "UX (Production)", 
     "Staging",
-    "BcTechDays"
+    "BcTechDays (Production)"
   ],
   "DeployToDev": {
     "environmentName": "PowerApps",
