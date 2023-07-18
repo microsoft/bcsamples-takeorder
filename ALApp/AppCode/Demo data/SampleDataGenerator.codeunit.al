@@ -5,11 +5,9 @@ codeunit 70011 "TO - SampleDataGenerator"
         ItemRecord: Record Item;
         CustomerRecord: Record Customer;
     begin
-        // Delete all added items
         ItemRecord.SetRange(SoldInRestaurant, true);
         ItemRecord.DeleteAll(true);
 
-        // Delete all added tables (customers)
         CustomerRecord.SetRange(IsTable, true);
         CustomerRecord.DeleteAll(true);
     end;
@@ -95,6 +93,7 @@ codeunit 70011 "TO - SampleDataGenerator"
             ItemRecord.Validate("Gen. Prod. Posting Group", GenProdPostingGroup.Code);
             ItemRecord.Validate("Tax Group Code", TaxGroupCode.Code);
             ItemRecord.Validate(SoldInRestaurant, true);
+            AddImageToItem(ItemPicture, ItemRecord);
 
             ItemRecord.Insert(true);
             AddItemUnitOfMeasure(ItemNumber);
