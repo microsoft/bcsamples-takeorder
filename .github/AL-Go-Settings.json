@@ -5,8 +5,7 @@
   "environments": [
     "Dev (Production)",
     "UX (Production)", 
-    "Staging",
-    "BcTechDays (Production)"
+    "Staging"
   ],
   "DeployToDev": {
     "environmentName": "PowerApps",
@@ -22,11 +21,5 @@
     "environmentName": "staging",
     "companyId": "14bce256-55e9-ed11-8850-6045bde98bba",
     "ppEnvironmentUrl": "https://org36168d50.crm.dynamics.com/"
-  },
-  "DeployToBcTechDays":
-  {
-    "environmentName": "Sandbox",
-    "companyId": "1536b51a-7d00-ee11-8f75-6045bdacccd6",
-    "ppEnvironmentUrl": "https://org82a94bff.crm.dynamics.com/"
   }
 }
