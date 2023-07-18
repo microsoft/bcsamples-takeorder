@@ -95,6 +95,7 @@ codeunit 70011 "TO - SampleDataGenerator"
             ItemRecord.Validate("Gen. Prod. Posting Group", GenProdPostingGroup.Code);
             ItemRecord.Validate("Tax Group Code", TaxGroupCode.Code);
             ItemRecord.Validate(SoldInRestaurant, true);
+            AddImageToItem(ItemPicture, ItemRecord);
 
             ItemRecord.Insert(true);
             AddItemUnitOfMeasure(ItemNumber);
