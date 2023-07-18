@@ -133,7 +133,7 @@
 				</trans-unit>
 				<trans-unit id="Codeunit 1526561685 - NamedType 2200312519" size-unit="char" translate="yes" xml:space="preserve">
 					<source>Free</source>
-					<target>Gratis</target>
+					<target>Ledig</target>
 					<note from="Developer" annotates="general" priority="2" />
 					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType SelectTableScreen_Free_ValueTxt</note>
 				</trans-unit>
@@ -301,7 +301,7 @@
 				</trans-unit>
 				<trans-unit id="Codeunit 1526561685 - NamedType 2124761177" size-unit="char" translate="yes" xml:space="preserve">
 					<source>A gallery with the available items</source>
-					<target>En galleri med de tilgængelige varer</target>
+					<target>Et galleri med de tilgængelige varer</target>
 					<note from="Developer" annotates="general" priority="2" />
 					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType TakeOrderScreen_ItemGallery_ValueTxt</note>
 				</trans-unit>
@@ -337,7 +337,7 @@
 				</trans-unit>
 				<trans-unit id="Page 3343386658 - Control 3043709377 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
 					<source>Base Unit Of Measure Code</source>
-					<target>Enhedsbogstav for grundenheden</target>
+					<target>Kode for grundenheden</target>
 					<note from="Developer" annotates="general" priority="2" />
 					<note from="Xliff Generator" annotates="general" priority="3">Page TO - ItemWithImage - Control baseUnitOfMeasureCode - Property Caption</note>
 				</trans-unit>
@@ -451,7 +451,7 @@
 				</trans-unit>
 				<trans-unit id="Page 2429216470 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
 					<source>Business Central Localization information for PowerApps</source>
-					<target>Forretningscentral lokaliseringsoplysninger til PowerApps</target>
+					<target>Business Central lokaliseringsoplysninger til PowerApps</target>
 					<note from="Developer" annotates="general" priority="2" />
 					<note from="Xliff Generator" annotates="general" priority="3">Page TO - LocaleInformation - Property Caption</note>
 				</trans-unit>
@@ -475,7 +475,7 @@
 				</trans-unit>
 				<trans-unit id="Page 2429216470 - Control 2521268130 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
 					<source>PowerApp Locale</source>
-					<target>PowerApp-landestandard</target>
+					<target>PowerApp landestandard</target>
 					<note from="Developer" annotates="general" priority="2" />
 					<note from="Xliff Generator" annotates="general" priority="3">Page TO - LocaleInformation - Control powerAppLocale - Property Caption</note>
 				</trans-unit>
@@ -517,7 +517,7 @@
 				</trans-unit>
 				<trans-unit id="Page 1124001333 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
 					<source>Tables</source>
-					<target>Tabele</target>
+					<target>Borde</target>
 					<note from="Developer" annotates="general" priority="2" />
 					<note from="Xliff Generator" annotates="general" priority="3">Page TO - Tables - Property Caption</note>
 				</trans-unit>
@@ -541,7 +541,7 @@
 				</trans-unit>
 				<trans-unit id="Page 1124001333 - Control 2050274664 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
 					<source>Is Table</source>
-					<target>Er tabel</target>
+					<target>Er bord</target>
 					<note from="Developer" annotates="general" priority="2" />
 					<note from="Xliff Generator" annotates="general" priority="3">Page TO - Tables - Control IsTable - Property Caption</note>
 				</trans-unit>
@@ -577,7 +577,7 @@
 				</trans-unit>
 				<trans-unit id="PageExtension 692397454 - Control 2050274664 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
 					<source>Is Table</source>
-					<target>Er Tabel</target>
+					<target>Er bord</target>
 					<note from="Developer" annotates="general" priority="2" />
 					<note from="Xliff Generator" annotates="general" priority="3">PageExtension TableCustomer - Control IsTable - Property Caption</note>
 				</trans-unit>
