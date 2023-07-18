@@ -1,0 +1,653 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xliff
+	xmlns="urn:oasis:names:tc:xliff:document:1.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+	<file datatype="xml" source-language="en-US" target-language="da-dk" original="Take Order Sample">
+		<body>
+			<group id="body">
+				<trans-unit id="Table 3038276197 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Take Order - Labels</source>
+					<target>Take Order - Etiketter</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Table TO - Labels - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Table 3038276197 - Field 655570925 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Label ID</source>
+					<target>Etiket ID</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Table TO - Labels - Field Label ID - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Table 3038276197 - Field 2273653569 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Language Code</source>
+					<target>Sprogkode</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Table TO - Labels - Field Language Code - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Table 3038276197 - Field 1942728498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Text Value</source>
+					<target>Tekstværdi</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Table TO - Labels - Field Text Value - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 2743919484" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Add one to the quantity</source>
+					<target>Tilføj én til antallet</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType AddText_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 1817771758" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Dismiss the quantity control</source>
+					<target>Afvis mængdekontrollen</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType DismissQuantityControl_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 384256513" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Add to selection</source>
+					<target>Tilføj til valg</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType FirstAdd_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 871042872" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Click to select</source>
+					<target>Klik for at vælge</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType GallerySelect_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 1796457" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Close the page</source>
+					<target>Luk siden</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType InfoScreen_Close_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 308139184" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Click to open the sample app documentation page</source>
+					<target>Klik for at åbne dokumentationssiden for prøveappen</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType InfoScreen_LinkToolTip_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 929340323" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Sample apps</source>
+					<target>Prøveapps</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType InfoScreen_Link_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 3866146274" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Read more about Business Central sample apps:</source>
+					<target>Læs mere om prøveapps til Business Central:</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType InfoScreen_ReadMore_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 208357288" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Take Order is a simple sample app that shows how to build a high fidelity canvas Power App using Business Central data.</source>
+					<target>Take Order er en simpel prøveapp, der viser, hvordan du kan opbygge en Power App med høj præcision ved hjælp af Business Central-data.</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType InfoScreen_Text_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 3794074107" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Business Central sample app</source>
+					<target>Prøveapp til Business Central</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType InfoScreen_Title_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 2160513365" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Image of item: </source>
+					<target>Billede af vare: </target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType ItemImageText_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 2032852397" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Allergens</source>
+					<target>Allergener</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType ItemScreen_Allergens_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 4074589256" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Close the page</source>
+					<target>Luk siden</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType ItemScreen_Close_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 1296424608" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Description</source>
+					<target>Beskrivelse</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType ItemScreen_Description_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 2447244843" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Coffee Facts</source>
+					<target>Kaffefakta</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType ItemScreen_Facts_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 648001934" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Item details</source>
+					<target>Varedetaljer</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType ItemScreen_Title_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 2492892835" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Loading data...</source>
+					<target>Indlæser data...</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType LoadingMessage_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 2200312519" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Free</source>
+					<target>Ledig</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType SelectTableScreen_Free_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 1275774944" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Gallery with available tables</source>
+					<target>Galleri med tilgængelige borde</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType SelectTableScreen_GalleryToolTip_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 3007608701" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Order placed</source>
+					<target>Bestilling placeret</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType SelectTableScreen_Occupied_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 3001105563" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Select table</source>
+					<target>Vælg bord</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType SelectTableScreen_Title_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 3823415964" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Refresh the list</source>
+					<target>Opdater listen</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType SelectTableScreen_Update_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 4070680399" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Open about screen</source>
+					<target>Åbn Om-siden</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType StartScreen_InfoScreen_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 1902421782" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Take Order</source>
+					<target>Tag ordre</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType StartScreen_TakeOrder_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 1526039082" size-unit="char" translate="yes" xml:space="preserve">
+					<source>User:</source>
+					<target>Bruger:</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType StartScreen_User_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 2989653148" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Substract one from the quantity</source>
+					<target>Træk én fra antallet</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType SubTract_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 1916313785" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Add more</source>
+					<target>Tilføj flere</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType SummaryScreen_AddMore_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 2498530372" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Go back to the previous page</source>
+					<target>Gå tilbage til den forrige side</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType SummaryScreen_Back_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 3818216172" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Are you sure you want to check out and close the order?</source>
+					<target>Er du sikker på, at du vil betale og afslutte ordren?</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType SummaryScreen_CheckOutMessage_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 610769245" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Checkout</source>
+					<target>Betal</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType SummaryScreen_CheckOut_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 3132302339" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Are you sure you want to cancel the order?</source>
+					<target>Er du sikker på, at du vil annullere ordren?</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType SummaryScreen_DeleteMessage_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 4086229774" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Delete the order</source>
+					<target>Slet ordren</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType SummaryScreen_Delete_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 1314696421" size-unit="char" translate="yes" xml:space="preserve">
+					<source>A gallery with the ordered items</source>
+					<target>Et galleri med de bestilte varer</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType SummaryScreen_Gallery_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 1790047117" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Order updated for </source>
+					<target>Ordren er opdateret for </target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType SummaryScreen_OrderUpdatedMessage_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 3257129121" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Submit</source>
+					<target>Indsend</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType SummaryScreen_Submit_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 419281087" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Add to order</source>
+					<target>Tilføj til ordren</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType SummaryScreen_SummaryAddTo_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 3049024526" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Order (draft)</source>
+					<target>Ordre (kladde)</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType SummaryScreen_SummaryDraftTitle_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 1508479737" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Group summar collapsed.</source>
+					<target>Gruppesammenfatning foldet sammen.</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType SummaryScreen_SummaryStateCollapsed_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 1665135465" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Group summary expanded.</source>
+					<target>Gruppesammenfatning udvidet.</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType SummaryScreen_SummaryStateExpanded_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 1679331314" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Order </source>
+					<target>Ordre </target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType SummaryScreen_SummarySubmittedTitle_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 3042453539" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Total:</source>
+					<target>Total:</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType SummaryScreen_Total_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 2803738008" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Close the list</source>
+					<target>Luk listen</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType TakeOrderScreen_Close_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 2744066853" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Delete the selection</source>
+					<target>Slet valget</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType TakeOrderScreen_Delete_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 4017039358" size-unit="char" translate="yes" xml:space="preserve">
+					<source>A gallery with the available item filters</source>
+					<target>En galleri med de tilgængelige varefiltre</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType TakeOrderScreen_FilterGallery_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 2436994422" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Full menu</source>
+					<target>Fuld menu</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType TakeOrderScreen_FullMenu_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 2124761177" size-unit="char" translate="yes" xml:space="preserve">
+					<source>A gallery with the available items</source>
+					<target>Et galleri med de tilgængelige varer</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType TakeOrderScreen_ItemGallery_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 537617320" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Items:</source>
+					<target>Varer:</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType TakeOrderScreen_Items_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 948862428" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Review</source>
+					<target>Gennemgå</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType TakeOrderScreen_Review_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Codeunit 1526561685 - NamedType 2752887085" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Total:</source>
+					<target>Total:</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Codeunit TO - LabelManagement - NamedType TakeOrderScreen_Totals_ValueTxt</note>
+				</trans-unit>
+				<trans-unit id="Page 3343386658 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Item with image</source>
+					<target>Vare med billede</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - ItemWithImage - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 3343386658 - Control 2568220578 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Allergen Information</source>
+					<target>Allergeninformation</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - ItemWithImage - Control AllergenInformation - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 3343386658 - Control 3043709377 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Base Unit Of Measure Code</source>
+					<target>Kode for grundenheden</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - ItemWithImage - Control baseUnitOfMeasureCode - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 3343386658 - Control 2058393039 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Display Name</source>
+					<target>Visningsnavn</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - ItemWithImage - Control DisplayName - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 3343386658 - Control 2832455149 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Facts</source>
+					<target>Fakta</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - ItemWithImage - Control Facts - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 3343386658 - Control 1405402048 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>GTIN</source>
+					<target>GTIN</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - ItemWithImage - Control GTIN - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 3343386658 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>System ID</source>
+					<target>System ID</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - ItemWithImage - Control id - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 3343386658 - Control 1024955636 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Item Category Code</source>
+					<target>Varekategori kode</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - ItemWithImage - Control itemCategoryCode - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 3343386658 - Control 1832822574 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Item Category Name</source>
+					<target>Varekategori navn</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - ItemWithImage - Control itemCategoryName - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 3343386658 - Control 349749505 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Picture Reference</source>
+					<target>Billedreference</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - ItemWithImage - Control itemImageText - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 3343386658 - Control 2757394829 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Number</source>
+					<target>Nummer</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - ItemWithImage - Control number - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 3343386658 - Control 1463933576 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Picture</source>
+					<target>Billede</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - ItemWithImage - Control picture - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 3343386658 - Control 768771525 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Picture Height</source>
+					<target>Billedehøjde</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - ItemWithImage - Control pictureHeight - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 3343386658 - Control 627410158 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Picture Width</source>
+					<target>Billede bredde</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - ItemWithImage - Control pictureWidth - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 3343386658 - Control 1560290547 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Short Item Description</source>
+					<target>Kort varebeskrivelse</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - ItemWithImage - Control ShortItemDescription - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 3343386658 - Control 4015147434 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Sold In Restaurant</source>
+					<target>Solgt i restauranten</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - ItemWithImage - Control SoldInRestaurant - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 3343386658 - Control 3421409717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Unit Price</source>
+					<target>Enhedspris</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - ItemWithImage - Control unitPrice - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 514910535 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Take Order Language Resources</source>
+					<target>Sprogressourcer til bestillingsfunktion</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - LanguageResources - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 514910535 - Control 2058393039 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Text Value</source>
+					<target>Tekstværdi</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - LanguageResources - Control DisplayName - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 514910535 - Control 1655319621 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Label Id</source>
+					<target>Mærke Id</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - LanguageResources - Control labelId - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 514910535 - Control 1794991033 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Language Code</source>
+					<target>Sprogkode</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - LanguageResources - Control languageCode - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 2429216470 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Business Central Localization information for PowerApps</source>
+					<target>Business Central lokaliseringsoplysninger til PowerApps</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - LocaleInformation - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 2429216470 - Control 639513079 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Country/Region Code</source>
+					<target>Land/region kode</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - LocaleInformation - Control countryRegionCode - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 2429216470 - Control 2058393039 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Display Name</source>
+					<target>Visningsnavn</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - LocaleInformation - Control DisplayName - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 2429216470 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>System ID</source>
+					<target>System-ID</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - LocaleInformation - Control id - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 2429216470 - Control 2521268130 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>PowerApp Locale</source>
+					<target>PowerApp landestandard</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - LocaleInformation - Control powerAppLocale - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 1420603389 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Take Order sample data</source>
+					<target>Eksempeldata for bestilling</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - SamplePage - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 1420603389 - Control 3787546483 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Tables - Customers</source>
+					<target>Borde - Kunder</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - SamplePage - Control PowerAppCustomers - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 1420603389 - Control 1007032516 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Restuarant - Items</source>
+					<target>Restaurant - Varer</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - SamplePage - Control PowerAppItems - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 1420603389 - Control 3862845261 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>This is a sample page to generate and delete data for the Take Order PowerApp</source>
+					<target>Dette er en eksempelside til generering og sletning af data til Take Order PowerApp</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - SamplePage - Control Processing - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 1420603389 - Action 337628313 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Delete sample Data</source>
+					<target>Slet eksempeldata</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - SamplePage - Action DeleteTestData - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 1420603389 - Action 327133839 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Generate or update sample Data</source>
+					<target>Generer eller opdater eksempeldata</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - SamplePage - Action GenerateTestData - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 1124001333 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Tables</source>
+					<target>Borde</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - Tables - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 1124001333 - Control 1762530770 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Address</source>
+					<target>Adresse</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - Tables - Control address - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 1124001333 - Control 2058393039 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Display Name</source>
+					<target>Visningsnavn</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - Tables - Control DisplayName - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 1124001333 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>System ID</source>
+					<target>System-ID</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - Tables - Control id - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 1124001333 - Control 2050274664 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Is Table</source>
+					<target>Er bord</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - Tables - Control IsTable - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 1124001333 - Control 349749505 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Picture Reference</source>
+					<target>Billedreference</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - Tables - Control itemImageText - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 1124001333 - Control 3281272467 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>E-Mail</source>
+					<target>E-mail</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - Tables - Control mail - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 1124001333 - Control 2757394829 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>No.</source>
+					<target>Num.</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - Tables - Control number - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="Page 1124001333 - Control 2524668112 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+					<source>Phone</source>
+					<target>Telefon</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">Page TO - Tables - Control phone - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="PageExtension 692397454 - Control 2050274664 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
+					<source>This property determines if the customer shows up inside the Take Order App</source>
+					<target>Denne egenskab bestemmer, om kunden vises i Take Order Appen</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">PageExtension TableCustomer - Control IsTable - Property ToolTip</note>
+				</trans-unit>
+				<trans-unit id="PageExtension 692397454 - Control 2050274664 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
+					<source>Is Table</source>
+					<target>Er bord</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">PageExtension TableCustomer - Control IsTable - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="PageExtension 1586160482 - Control 2568220578 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+					<source>Enter the allergen information for the item.</source>
+					<target>Indtast allergeninformationen for varen.</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">PageExtension TO - RestaurantItem - Control AllergenInformation - Property ToolTip</note>
+				</trans-unit>
+				<trans-unit id="PageExtension 1586160482 - Control 2568220578 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+					<source>Allergen Information</source>
+					<target>Allergeninformation</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">PageExtension TO - RestaurantItem - Control AllergenInformation - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="PageExtension 1586160482 - Control 4087906051 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+					<source>Enter the long item description for the item.</source>
+					<target>Indtast den lange varebeskrivelse for varen.</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">PageExtension TO - RestaurantItem - Control LongItemDescription - Property ToolTip</note>
+				</trans-unit>
+				<trans-unit id="PageExtension 1586160482 - Control 4087906051 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+					<source>Long Item Description</source>
+					<target>Lang varebeskrivelse</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">PageExtension TO - RestaurantItem - Control LongItemDescription - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="PageExtension 1586160482 - Control 4015147434 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+					<source>Check this box if the item is sold in the restaurant.</source>
+					<target>Marker afkrydsningsfeltet, hvis varen sælges i restauranten.</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">PageExtension TO - RestaurantItem - Control SoldInRestaurant - Property ToolTip</note>
+				</trans-unit>
+				<trans-unit id="PageExtension 1586160482 - Control 4015147434 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+					<source>Sold in Restaurant</source>
+					<target>Solgt i restauranten</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">PageExtension TO - RestaurantItem - Control SoldInRestaurant - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="TableExtension 426337365 - Field 2568220578 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+					<source>Allergen Information</source>
+					<target>Allergeninformation</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">TableExtension TO - Item - Field AllergenInformation - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="TableExtension 426337365 - Field 2832455149 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+					<source>Coffee facts</source>
+					<target>Kaffefakta</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">TableExtension TO - Item - Field Facts - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="TableExtension 426337365 - Field 1560290547 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+					<source>Short Item Description</source>
+					<target>Kort varebeskrivelse</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">TableExtension TO - Item - Field ShortItemDescription - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="TableExtension 426337365 - Field 4015147434 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+					<source>Is Item sold in Restaurant</source>
+					<target>Er varen solgt i restauranten</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">TableExtension TO - Item - Field SoldInRestaurant - Property Caption</note>
+				</trans-unit>
+				<trans-unit id="TableExtension 745623988 - Field 2050274664 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
+					<source>Is Table</source>
+					<target>Er bordet</target>
+					<note from="Developer" annotates="general" priority="2" />
+					<note from="Xliff Generator" annotates="general" priority="3">TableExtension TO - Table - Field IsTable - Property Caption</note>
+				</trans-unit>
+			</group>
+		</body>
+	</file>
+</xliff>
