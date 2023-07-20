@@ -20,7 +20,7 @@
   },
   "DeployToStaging": {
     "environmentName": "staging",
-    "companyId": "14bce256-55e9-ed11-8850-6045bde98bba",
+    "companyId": "2ea52f0b-4219-ee11-9cc4-6045bdc8a349",
     "ppEnvironmentUrl": "https://org36168d50.crm.dynamics.com/"
   },
   "DeployToBcTechDays":
