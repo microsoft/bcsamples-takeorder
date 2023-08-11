@@ -598,7 +598,7 @@
                 colSelectedItems,
                 Patch('salesOrderLines (v2.0)', 
                       Defaults('salesOrderLines (v2.0)'), 
-                      {documentId: varActiveorderForSelectedTable.id, itemId: ThisRecord.id, quantity: ThisRecord.quantity}
+                      {'Document Id': varActiveorderForSelectedTable.Id, 'Item Id': ThisRecord.id, Quantity: ThisRecord.quantity}
                     );
             );
             
@@ -632,7 +632,7 @@
         OnSelect: |
             =UpdateContext({ctxShowCheckoutOverlay: true, ctxError: false});
             
-            IfError(Set(varCreatedSalesOrder, Patch('salesOrders (v2.0)', Defaults('salesOrders (v2.0)'), {customerId: varSelectedTable.id})),
+            IfError(Set(varCreatedSalesOrder, Patch('salesOrders (v2.0)', Defaults('salesOrders (v2.0)'), {'Customer Id': varSelectedTable.id})),
                 Notify("An error happened while creating the order for " & varSelectedTable.displayName , NotificationType.Error);
                 Trace("An error happened whilte creating the order", TraceSeverity.Error, FirstError);
                 UpdateContext({ctxError: true});
@@ -641,7 +641,7 @@
             If(Not(ctxError),
                 IfError(
                     ForAll(colSelectedItems As item,
-                        Patch('salesOrderLines (v2.0)', Defaults('salesOrderLines (v2.0)'), {documentId: varCreatedSalesOrder.id, itemId: item.id, quantity: item.quantity});
+                        Patch('salesOrderLines (v2.0)', Defaults('salesOrderLines (v2.0)'), {'Document Id': varCreatedSalesOrder.Id, 'Item Id': item.id, Quantity: item.quantity});
                     )
                     ,
                     // Log the the error if it happened
@@ -821,7 +821,7 @@
             =UpdateContext({ctxShowCheckOutDialog: false, ctxShowCheckoutOverlay: true});
             
             // Add error handling
-            Set(varPostSalesOrderResponse, PostBCSalesOrder.Run(varActiveorderForSelectedTable.id));
+            Set(varPostSalesOrderResponse, PostBCSalesOrder.Run(varActiveorderForSelectedTable.Id));
             
             If(And(Not(IsBlankOrError(varPostSalesOrderResponse)), Value(varPostSalesOrderResponse.status) > 0),
                 // Post succeded 
@@ -883,11 +883,11 @@
             // Map data from sales order if it exits for table
             If(ctxShouldLoadActiveOrder,
                 // Load lines for active table order
-                ClearCollect(colTempSalesOrderLines, Filter('salesOrderLines (v2.0)', documentId = varActiveorderForSelectedTable.id));
+                ClearCollect(colTempSalesOrderLines, Filter('salesOrderLines (v2.0)', 'Document Id' = varActiveorderForSelectedTable.Id));
             
                 // Find all unique Items from Sales orders
                 Clear(colUniqueItemsFromOrder);
-                ForAll(Distinct(colTempSalesOrderLines, itemId) As uniquItemId, 
+                ForAll(Distinct(colTempSalesOrderLines, 'Item Id') As uniquItemId, 
                     Collect(colUniqueItemsFromOrder, LookUp('itemsWithImage (businessCentralDemos/TakeOrder/beta)', id = uniquItemId.Value));
                 );
             

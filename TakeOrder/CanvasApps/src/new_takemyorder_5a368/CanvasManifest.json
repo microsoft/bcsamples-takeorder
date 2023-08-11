@@ -1,8 +1,8 @@
 {
   "FormatVersion": "0.24",
   "Header": {
-    "DocVersion": "1.330",
-    "MinVersionToLoad": "1.327",
+    "DocVersion": "1.333",
+    "MinVersionToLoad": "1.331",
     "MSAppStructureVersion": "2.0"
   },
   "Properties": {
@@ -42,12 +42,12 @@
       "enableonstart": true,
       "enableonstartnavigate": false,
       "enablepcfmoderndatasets": true,
-      "enablepowerautomatepane": true,
       "enablerowscopeonetonexpand": false,
       "enablerpawarecomponentdependency": true,
       "enablerulespanel": false,
       "enableruntimepolicies": false,
       "enablesaveloadcleardataonweb": false,
+      "enableupdateifdelegation": false,
       "enhanceddelegation": true,
       "enhancedgalleryinitialization": true,
       "errorhandling": true,
@@ -64,6 +64,7 @@
       "improvedmediacapture": false,
       "improvedtabstopbehavior": false,
       "impurenodedelegation": false,
+      "isemptyrequirestableargument": true,
       "keeprecentscreensloaded": false,
       "longlivingcache": false,
       "mobilenativerendering": false,
@@ -82,6 +83,7 @@
       "reverttooldpowerautomate": false,
       "rtlinstudiopreview": false,
       "rtlsupport": false,
+      "smartemaildatacard": false,
       "supportcolumnnamesasidentifiers": false,
       "tabledoesntwraprecords": true,
       "untypedobject": false,
@@ -95,7 +97,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 0,
+    "BindingErrorCount": 98,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "Phone",
@@ -114,7 +116,8 @@
     "ManualOfflineProfileId": "",
     "Name": "Take Order",
     "OriginatingVersion": "1.326",
-    "ParserErrorCount": 0
+    "ParserErrorCount": 0,
+    "ShowStatusBar": false
   },
   "PublishInfo": {
     "AppName": "Take Order",
