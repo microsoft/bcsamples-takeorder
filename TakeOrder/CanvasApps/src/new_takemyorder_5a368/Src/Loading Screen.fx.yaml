@@ -139,7 +139,7 @@
         HoverFill: =Color.Transparent
         OnSelect: |-
             =// Get localized labels from Bc
-            Set(varLanguageResources, Filter('languageResources (businessCentralDemos/TakeOrder/beta)', languageCode = "da-dk"));
+            Set(varLanguageResources, Filter('languageResources (businessCentralDemos/TakeOrder/beta)', languageCode = "en-us"));
             Set(varLabels, {
                 Subtract: LookUp(varLanguageResources, labelId = "Subtract").DisplayName,
                 LoadingMessage: LookUp(varLanguageResources, labelId = "LoadingMessage").DisplayName,
@@ -204,8 +204,7 @@
             Set(varBcLocale, varBcCompany.powerAppLocale);
             
             // Note: when this format is used with locale, the currentcy sign is localized by the platform
-            Set(varCurrencyFormat, "$#,##0.00");
-            
+            Set(varCurrencyFormat, "$#,##0.00");            
             
             Navigate('Start screen', ScreenTransition.Fade);
         OnTimerStart: =Select(Self);
