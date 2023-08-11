@@ -117,7 +117,7 @@ codeunit 70011 "TO - SampleDataGenerator"
         if not CustomerCreated or not IsHandled then
             Error(InvalidCustTemplateErr, CustomerTempl.Code);
 
-        // Add a spoonful of sugar
+        // Update the customer information
         CustomerRecord.Get(CustomerRecord."No.");
         CustomerRecord.Validate(Name, CustomerName);
         CustomerRecord.Validate(IsTable, true);
