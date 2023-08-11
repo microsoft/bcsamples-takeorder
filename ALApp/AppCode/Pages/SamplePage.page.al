@@ -11,8 +11,26 @@ page 70010 "TO - SamplePage"
         {
             label(Processing)
             {
-                Caption = 'This is a sample page to generate and delete data for the Take Order PowerApp';
+                Caption = 'This is a sample page to help manage and set up the Take Order PowerApp';
             }
+
+            group(SetUpData)
+            {
+                Caption = 'Set up information';
+                field(CurrentEnvironment; CurrentEnvironment)
+                {
+                    ApplicationArea = All;
+                    Editable = false;
+                    Caption = 'Environment Name';
+                }
+                field(CurrentCompanyId; CurrentCompanyId)
+                {
+                    ApplicationArea = All;
+                    Editable = false;
+                    Caption = 'Company Id';
+                }
+            }
+
             part(PowerAppCustomers; "TO - CustomerListPart")
             {
                 Editable = false;
@@ -66,4 +84,18 @@ page 70010 "TO - SamplePage"
             }
         }
     }
+
+    trigger OnOpenPage()
+    var
+        CompanyRecord: Record Company;
+        EnvironmentInformation: Codeunit "Environment Information";
+    begin
+        CompanyRecord.Get(CompanyName());
+        CurrentCompanyId := CompanyRecord.SystemId;
+        CurrentEnvironment := EnvironmentInformation.GetEnvironmentName();
+    end;
+
+    var
+        CurrentEnvironment: Text;
+        CurrentCompanyId: Guid;
 }

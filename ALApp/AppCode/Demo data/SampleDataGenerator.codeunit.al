@@ -5,11 +5,9 @@ codeunit 70011 "TO - SampleDataGenerator"
         ItemRecord: Record Item;
         CustomerRecord: Record Customer;
     begin
-        // Delete all added items
         ItemRecord.SetRange(SoldInRestaurant, true);
         ItemRecord.DeleteAll(true);
 
-        // Delete all added tables (customers)
         CustomerRecord.SetRange(IsTable, true);
         CustomerRecord.DeleteAll(true);
     end;
