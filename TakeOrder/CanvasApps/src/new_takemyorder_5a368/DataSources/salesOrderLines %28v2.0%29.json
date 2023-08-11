@@ -3,7 +3,7 @@
     "ApiId": "/providers/microsoft.powerapps/apis/shared_dynamicssmbsaas",
     "CdpRevision": {
       "BaseUrl": "/v3",
-      "LastChangedTimeString": "2023-03-17T21:39:52.4860000Z",
+      "LastChangedTimeString": "2023-06-29T17:45:13.1300000Z",
       "RevisionNumber": 3
     },
     "ConnectedDataSourceInfoNameMapping": {
@@ -11,6 +11,7 @@
       "amountExcludingTax": "Amount Excluding Tax",
       "amountIncludingTax": "Amount Including Tax",
       "description": "Description",
+      "description2": "Description 2",
       "discountAmount": "Discount Amount",
       "discountAppliedBeforeTax": "Discount Applied Before Tax",
       "discountPercent": "Discount Percent",
