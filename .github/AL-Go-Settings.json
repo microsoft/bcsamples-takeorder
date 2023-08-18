@@ -3,7 +3,7 @@
   "templateUrl": "https://github.com/Microsoft/AL-Go-PTE@PPPreview",
   "powerPlatformSolutionFolder": "TakeOrder",
   "environments": [
-    "Dev (Production)"
+    "Dev"
   ],
   "DeployToDev": {
     "environmentName": "PowerApps",
