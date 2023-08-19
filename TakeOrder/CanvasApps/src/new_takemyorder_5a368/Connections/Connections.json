@@ -3,7 +3,7 @@
     "connectionRef": {
       "apiTier": "Standard",
       "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1615/1.0.1615.3163/logicflows/icon.png",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1636/1.0.1636.3297/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
         "6cb6806c-e815-4e58-8693-91bcb31c69e7": {
@@ -38,11 +38,36 @@
     "dependents": [],
     "id": "150e2896-54f3-405b-a1ae-bdda9e197568"
   },
+  "4e33865c-082c-4ac6-827a-7bf5dfc88641": {
+    "connectionRef": {
+      "apiTier": "Premium",
+      "displayName": "Dynamics 365 Business Central",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1644/1.0.1644.3342/dynamicssmbsaas/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_dynamicssmbsaas",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "POWERAPPS,dc50d5e8-f9c9-ed11-94cc-000d3a220b2f": {
+        "dataSources": {
+          "itemsWithImage (businessCentralDemos/TakeOrder/beta)": {
+            "tableName": "itemsWithImage,businessCentralDemos%252FTakeOrder%252Fbeta"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "itemsWithImage (businessCentralDemos/TakeOrder/beta)"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "4e33865c-082c-4ac6-827a-7bf5dfc88641"
+  },
   "6cb6806c-e815-4e58-8693-91bcb31c69e7": {
     "connectionRef": {
       "apiTier": "Premium",
       "displayName": "Dynamics 365 Business Central",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1624/1.0.1624.3220/dynamicssmbsaas/icon.png",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1644/1.0.1644.3342/dynamicssmbsaas/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_dynamicssmbsaas",
       "parameterHints": {},
       "parameterHintsV2": {}
@@ -50,9 +75,6 @@
     "datasets": {
       "PowerApps,dc50d5e8-f9c9-ed11-94cc-000d3a220b2f": {
         "dataSources": {
-          "itemsWithImage (businessCentralDemos/TakeOrder/beta)": {
-            "tableName": "itemsWithImage,businessCentralDemos%252FTakeOrder%252Fbeta"
-          },
           "languageResources (businessCentralDemos/TakeOrder/beta)": {
             "tableName": "languageResources,businessCentralDemos%252FTakeOrder%252Fbeta"
           },
@@ -74,7 +96,6 @@
     "dataSources": [
       "salesOrders (v2.0)",
       "salesOrderLines (v2.0)",
-      "itemsWithImage (businessCentralDemos/TakeOrder/beta)",
       "languageResources (businessCentralDemos/TakeOrder/beta)",
       "localeInformations (businessCentralDemos/TakeOrder/beta)",
       "tables (businessCentralDemos/TakeOrder/beta)"

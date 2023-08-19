@@ -3,30 +3,11 @@
   "templateUrl": "https://github.com/Microsoft/AL-Go-PTE@PPPreview",
   "powerPlatformSolutionFolder": "TakeOrder",
   "environments": [
-    "Dev (Production)",
-    "UX (Production)", 
-    "Staging",
-    "BcTechDays (Production)"
+    "Dev"
   ],
   "DeployToDev": {
     "environmentName": "PowerApps",
     "companyId": "dc50d5e8-f9c9-ed11-94cc-000d3a220b2f",
-    "ppEnvironmentUrl": "https://orgc791aad2.crm.dynamics.com/"
-  },
-  "DeployToUX": {
-    "environmentName": "production",
-    "companyId": "14bce256-55e9-ed11-8850-6045bde98bba",
-    "ppEnvironmentUrl": "https://org46f025ef.crm.dynamics.com/"
-  },
-  "DeployToStaging": {
-    "environmentName": "staging",
-    "companyId": "2ea52f0b-4219-ee11-9cc4-6045bdc8a349",
-    "ppEnvironmentUrl": "https://org36168d50.crm.dynamics.com/"
-  },
-  "DeployToBcTechDays":
-  {
-    "environmentName": "Sandbox",
-    "companyId": "1536b51a-7d00-ee11-8f75-6045bdacccd6",
-    "ppEnvironmentUrl": "https://org82a94bff.crm.dynamics.com/"
+    "ppEnvironmentUrl": "https://org1316ffa2.crm.dynamics.com/"
   }
 }
