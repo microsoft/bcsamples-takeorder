@@ -5,9 +5,9 @@
   "environments": [
     "Staging"
   ],
-  "DeployToStaging": {
-    "environmentName": "staging",
-    "companyId": "5736fe89-41bc-ee11-907d-6045bdc8c244",
-    "ppEnvironmentUrl": "https://orgfcb19dd9.crm.dynamics.com/"
-  }
+ "DeployToStaging": {
+  "environmentName": "Sandbox",
+  "companyId": "f1678e37-e50b-ef11-9f8e-6045bdc8c192",
+  "ppEnvironmentUrl": "https://org8ea6d6a5.crm.dynamics.com/"
+ }
 }
