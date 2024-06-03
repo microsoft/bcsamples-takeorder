@@ -8,6 +8,6 @@
  "DeployToStaging": {
   "environmentName": "Sandbox",
   "companyId": "f1678e37-e50b-ef11-9f8e-6045bdc8c192",
-  "ppEnvironmentUrl": "https://org8ea6d6a5.crm.dynamics.com/"
+  "ppEnvironmentUrl": "https://orgf287aea1.crm.dynamics.com/"
  }
 }
