@@ -1,13 +1,13 @@
 {
   "type": "PTE",
-  "templateUrl": "https://github.com/microsoft/AL-Go-PTE@PPPreview",
+  "templateUrl": "https://github.com/Microsoft/al-go-pte@preview",
   "powerPlatformSolutionFolder": "TakeOrder",
   "environments": [
     "Staging"
   ],
-  "DeployToStaging": {
-    "environmentName": "Sandbox",
-    "companyId": "f1678e37-e50b-ef11-9f8e-6045bdc8c192",
-    "ppEnvironmentUrl": "https://orgf287aea1.crm.dynamics.com/"
-   }
+ "DeployToStaging": {
+  "environmentName": "Sandbox",
+  "companyId": "f1678e37-e50b-ef11-9f8e-6045bdc8c192",
+  "ppEnvironmentUrl": "https://orgf287aea1.crm.dynamics.com/"
+ }
 }
