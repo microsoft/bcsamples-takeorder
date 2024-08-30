@@ -17,7 +17,7 @@ The extension also includes a sample data page called **Take Order sample data**
 
 ## Try the sample yourself
 
-Follow the steps in the [Try our sample apps](https://github.com/microsoft/AL-Go/blob/PPPreview/Scenarios/TryPowerPlatformSamples.md) guide to try the sample with your own tenant.
+Follow the steps in the [Try our sample apps](https://github.com/microsoft/AL-Go/blob/main/Scenarios/TryPowerPlatformSamples.md) guide to try the sample with your own tenant.
 
 ## Per Tenant Extension Project
 
