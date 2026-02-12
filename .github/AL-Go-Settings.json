@@ -10,5 +10,6 @@
     "companyId": "f1678e37-e50b-ef11-9f8e-6045bdc8c192",
     "ppEnvironmentUrl": "https://orgf287aea1.crm.dynamics.com/"
   },
-  "templateSha": "8fedaa0bba2cf96f8b2b0c57b7d4ba88e9c7069b"
+  "templateSha": "8fedaa0bba2cf96f8b2b0c57b7d4ba88e9c7069b",
+  "PullRequestTrigger": "pull_request"
 }
